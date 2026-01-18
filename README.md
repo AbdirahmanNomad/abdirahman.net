@@ -15,7 +15,7 @@ Personal portfolio website showcasing projects in healthcare technology, financi
 [![Contentlayer](https://img.shields.io/badge/Contentlayer-0.3-000000?style=for-the-badge)](https://www.contentlayer.dev/)
 [![Netlify](https://img.shields.io/badge/Netlify-Ready-00C7B7?style=for-the-badge&logo=netlify)](https://netlify.com/)
 
-[🌐 Live Website](https://abdirahman.net) • [📧 Email](mailto:hello@abdirahman.net) • [💼 GitHub](https://github.com/AbdirahmanNomad) • [🐦 Twitter](https://twitter.com/abdirahmanone)
+[🌐 Live Website](https://abdirahman.net) • [📧 Email](mailto:hello@abdirahman.net) • [💼 GitHub](https://github.com/AbdirahmanNomad) • [🐦 Twitter](https://x.com/abdirahmaanone)
 
 </div>
 
@@ -243,7 +243,7 @@ This website is optimized for both search engines and AI systems:
 - **Website:** [abdirahman.net](https://abdirahman.net)
 - **Email:** [hello@abdirahman.net](mailto:hello@abdirahman.net)
 - **GitHub:** [@AbdirahmanNomad](https://github.com/AbdirahmanNomad)
-- **Twitter:** [@abdirahmanone](https://twitter.com/abdirahmanone)
+- **Twitter:** [@abdirahmaanone](https://x.com/abdirahmaanone)
 - **Facebook:** [facebook.com/abdirahmanone](https://www.facebook.com/abdirahmanone/)
 - **Instagram:** [@abdirahmanone](https://instagram.com/abdirahmanone)
 

@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abdirahman Ahmed - Full-Stack Developer & Entrepreneur",
     description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. DNA Analysis System, IBAN & SWIFT Validator, TransferGalaxy.",
-    creator: "@abdirahmanone",
+    creator: "@abdirahmaanone",
   },
   alternates: {
     canonical: "https://abdirahman.net",
@@ -97,7 +97,7 @@ export default function RootLayout({
     image: "https://abdirahman.net/og.png",
     sameAs: [
       "https://github.com/AbdirahmanNomad",
-      "https://twitter.com/abdirahmanone",
+      "https://x.com/abdirahmaanone",
       "https://www.facebook.com/abdirahmanone/",
       "https://instagram.com/abdirahmanone",
     ],
@@ -196,7 +196,7 @@ export default function RootLayout({
       description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
       sameAs: [
         "https://github.com/AbdirahmanNomad",
-        "https://twitter.com/abdirahmanone",
+        "https://x.com/abdirahmaanone",
         "https://www.facebook.com/abdirahmanone/",
         "https://instagram.com/abdirahmanone",
       ],

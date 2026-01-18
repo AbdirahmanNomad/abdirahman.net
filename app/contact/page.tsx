@@ -13,9 +13,9 @@ const socials = [
 	},
 	{
 		icon: <Twitter size={20} />,
-		href: "https://twitter.com/abdirahmanone",
+		href: "https://x.com/abdirahmaanone",
 		label: "Twitter",
-		handle: "@abdirahmanone",
+		handle: "@abdirahmaanone",
 	},
 	{
 		icon: <Github size={20} />,
