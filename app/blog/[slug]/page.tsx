@@ -61,7 +61,7 @@ export default async function PostPage({ params }: Props) {
   };
 
   return (
-    <div className="bg-zinc-50 min-h-screen">
+    <div className="bg-gradient-to-tl from-zinc-900 via-zinc-400/10 to-zinc-900 min-h-screen">
       <Script
         id="schema-blog-posting"
         type="application/ld+json"
@@ -80,7 +80,7 @@ export default async function PostPage({ params }: Props) {
 
         <header className="mb-12">
           <div className="flex items-center justify-between gap-4 mb-4">
-            <div className="text-sm text-zinc-500">
+            <div className="text-sm text-zinc-400">
               {post.date ? (
                 <time dateTime={new Date(post.date).toISOString()}>
                   {Intl.DateTimeFormat(undefined, {
@@ -97,18 +97,18 @@ export default async function PostPage({ params }: Props) {
             </span>
           </div>
           
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl font-display mb-4">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl font-display mb-4">
             {post.title}
           </h1>
           
           {post.category && (
-            <span className="inline-block px-3 py-1 text-sm bg-zinc-200 text-zinc-700 rounded border border-zinc-300">
+            <span className="inline-block px-3 py-1 text-sm bg-zinc-800/50 text-zinc-400 rounded border border-zinc-700/50">
               {post.category}
             </span>
           )}
         </header>
 
-        <article className="prose prose-zinc prose-quoteless max-w-none">
+        <article className="prose prose-zinc prose-quoteless max-w-none prose-invert">
           <Mdx code={post.body.code} />
         </article>
       </div>
