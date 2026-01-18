@@ -55,64 +55,109 @@ export default function About() {
 
 							<Card>
 								<div className="p-8">
-									<h2 className="text-2xl font-bold text-zinc-100 mb-6">Skills & Technologies</h2>
+									<h2 className="text-2xl font-bold text-zinc-100 mb-8">Skills & Technologies</h2>
 									
 									{/* Frontend Technologies */}
-									<div className="mb-6">
-										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Frontend</h3>
-										<div className="flex flex-wrap gap-3">
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-blue-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Frontend</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
 											{["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"].map((tech) => (
-												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
-													{tech}
-												</span>
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-blue-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
 											))}
 										</div>
 									</div>
 
 									{/* Backend Technologies */}
-									<div className="mb-6">
-										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Backend</h3>
-										<div className="flex flex-wrap gap-3">
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-green-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Backend</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
 											{["Python", "FastAPI", "Node.js", "SQLite", "PostgreSQL", "PostGIS", "Redis", "REST APIs"].map((tech) => (
-												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
-													{tech}
-												</span>
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-green-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
 											))}
 										</div>
 									</div>
 
 									{/* API Development & Tools */}
-									<div className="mb-6">
-										<h3 className="text-lg font-semibold text-zinc-200 mb-3">API Development</h3>
-										<div className="flex flex-wrap gap-3">
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-purple-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">API Development</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
 											{["RapidAPI", "OpenAPI", "GraphQL", "REST", "API Gateway", "Rate Limiting", "Authentication"].map((tech) => (
-												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
-													{tech}
-												</span>
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-purple-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
 											))}
 										</div>
 									</div>
 
 									{/* Tools & Platforms */}
-									<div className="mb-6">
-										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Tools & Platforms</h3>
-										<div className="flex flex-wrap gap-3">
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-orange-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Tools & Platforms</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
 											{["Git", "GitHub", "Docker", "Netlify", "Vercel", "Playwright", "Machine Learning", "AI Integration"].map((tech) => (
-												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
-													{tech}
-												</span>
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-orange-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
 											))}
 										</div>
 									</div>
 
 									{/* Specialized Skills */}
 									<div>
-										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Specialized Skills</h3>
-										<div className="flex flex-wrap gap-3">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-red-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Specialized Skills</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
 											{["Cybersecurity", "Fintech", "Healthcare Technology", "Media Production", "Marketing", "SEO Optimization"].map((tech) => (
-												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
-													{tech}
-												</span>
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-red-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-red-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-red-500/0 to-red-500/0 group-hover:from-red-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
 											))}
 										</div>
 									</div>
