@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://abdirahman.net/og.png",
+        url: "https://abdirahman.net/og.jpg",
         width: 1200,
         height: 628,
         alt: "Abdirahman Ahmed - Portfolio",
@@ -94,7 +94,7 @@ export default function RootLayout({
     name: "Abdirahman Ahmed",
     alternateName: "Maano",
     url: "https://abdirahman.net",
-    image: "https://abdirahman.net/og.png",
+    image: "https://abdirahman.net/og.jpg",
     sameAs: [
       "https://github.com/AbdirahmanNomad",
       "https://x.com/abdirahmaanone",
@@ -191,7 +191,7 @@ export default function RootLayout({
       name: "Abdirahman Ahmed",
       alternateName: "Maano",
       url: "https://abdirahman.net",
-      image: "https://abdirahman.net/og.png",
+      image: "https://abdirahman.net/og.jpg",
       jobTitle: "Full-Stack Developer & Entrepreneur",
       description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
       sameAs: [
