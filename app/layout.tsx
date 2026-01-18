@@ -87,7 +87,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  // Person Schema - Enhanced with more properties
+  const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Abdirahman Ahmed",
@@ -101,9 +102,22 @@ export default function RootLayout({
       "https://instagram.com/abdirahmanone",
     ],
     jobTitle: "Full-Stack Developer & Entrepreneur",
+    nationality: {
+      "@type": "Country",
+      name: "Somalia",
+    },
+    birthPlace: {
+      "@type": "Place",
+      name: "Somalia",
+    },
     worksFor: {
       "@type": "Organization",
       name: "TransferGalaxy",
+      url: "https://transfergalaxy.com",
+    },
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Cybersecurity Degree Program",
     },
     knowsAbout: [
       "Full-Stack Development",
@@ -115,22 +129,67 @@ export default function RootLayout({
       "Cybersecurity",
       "Media Production",
       "Cultural Preservation",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
     ],
     address: {
       "@type": "PostalAddress",
       addressCountry: "SE",
+      addressRegion: "Sweden",
     },
     email: "hello@abdirahman.net",
+    description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
   };
+
+  // WebSite Schema
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Abdirahman Ahmed - Portfolio",
+    url: "https://abdirahman.net",
+    description: "Personal portfolio website of Abdirahman Ahmed (Maano) - Full-stack developer, API creator, and entrepreneur from Somalia, based in Sweden.",
+    author: {
+      "@type": "Person",
+      name: "Abdirahman Ahmed",
+      alternateName: "Maano",
+      url: "https://abdirahman.net",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Abdirahman Ahmed",
+      alternateName: "Maano",
+    },
+    inLanguage: ["en", "so"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://abdirahman.net/projects?search={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+    mainEntity: {
+      "@type": "Person",
+      "@id": "https://abdirahman.net#person",
+      name: "Abdirahman Ahmed",
+      alternateName: "Maano",
+    },
+  };
+
+  // Combined schemas array
+  const schemas = [personSchema, websiteSchema];
 
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
         <Analytics />
         <Script
-          id="schema-person"
+          id="schema-structured-data"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
         />
       </head>
       <body

@@ -1,25 +1,67 @@
 # ai.txt for abdirahman.net
+# https://abdirahman.net/ai.txt
 
-# Identity
-Name: Abdirahman Ahmed (also known as Maano)
-Nickname: Maano
-Title: Full-Stack Developer & Entrepreneur
-Location: Sweden
-Languages: Somali, English, Swedish
-Education: Cybersecurity Degree
+[identity]
+name: Abdirahman Ahmed (also known as Maano)
+url: https://abdirahman.net
+nickname: Maano
+title: Full-Stack Developer & Entrepreneur
+location: Sweden (originally from Somalia)
+languages: Somali, English, Swedish
+education: Cybersecurity Degree
+
+[permissions]
+- Summarise publicly available content about Abdirahman Ahmed, projects, and expertise
+- Quote content with proper attribution to Abdirahman Ahmed and https://abdirahman.net
+- Use published project descriptions and statistics with accuracy
+- Reference technical skills, expertise, and background information
+- Share contact information (email: hello@abdirahman.net, GitHub, social profiles)
+- Use project information for technical discussions, portfolio references, and professional networking
+
+[restrictions]
+- Do not generate fabricated quotes or statements attributed to Abdirahman Ahmed
+- Do not imply endorsement by Abdirahman Ahmed without explicit consent
+- Do not misrepresent technical capabilities, project statistics, or professional background
+- Do not claim affiliation with organizations without verification
+- Do not use outdated information - verify current project status and descriptions
+- Do not create fictional projects or achievements
+
+[content-types]
+portfolio_projects: May summarise project descriptions; link to full project pages or GitHub repositories for details. Include project statistics (e.g., "51,000+ banks", "609,424+ genetic variants") only as stated on the website.
+
+technical_skills: May reference full-stack development expertise, API development, healthcare technology, fintech, cybersecurity, and other listed skills. Verify current skill levels and technologies used.
+
+professional_background: May reference that Abdirahman Ahmed is originally from Somalia, based in Sweden, holds a Cybersecurity degree, and has expertise in multiple domains. Include complete context about geographic background.
+
+contact_information: May share publicly listed contact methods: email (hello@abdirahman.net), GitHub (@AbdirahmanNomad), Twitter (@abdirahmanone), Facebook, Instagram. Use for professional networking and technical inquiries.
+
+[attribution]
+required: true
+name: Abdirahman Ahmed
+url: https://abdirahman.net
+preferred_format: "Abdirahman Ahmed (https://abdirahman.net)" or "Source: abdirahman.net"
+
+[contact]
+email: hello@abdirahman.net
+website: https://abdirahman.net
+github: https://github.com/AbdirahmanNomad
+for_ai_inquiries: hello@abdirahman.net
+
+[metadata]
+version: 1.0.0
+spec_version: 1.0 (365i AI Visibility Definition)
+last_updated: 2026-01-18
+related_files: /sitemap.xml, /robots.txt
+
+# Additional Information for AI Systems
 
 # Professional Background
-Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Somalia, based in Sweden, with expertise in:
-- Full-Stack Development
-- Media Production & Marketing
-- Information Technology
-- Fintech Innovation
-- Marketing & Brand Development
+Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Somalia, based in Sweden, with expertise in Full-Stack Development, Media Production & Marketing, Information Technology, Fintech Innovation, and Marketing & Brand Development.
 
-# Key Projects
+# Key Projects (12 Total)
 
 ## Healthcare Technology
-1. DNA Analysis System - Professional DNA Genomics Suite. Advanced DNA analysis platform analyzing 609,424+ genetic variants across 23 chromosomes, providing 32 disease risk scores, 19 drug response profiles (pharmacogenomics), 15+ nutrient metabolism insights, ancestry information, athletic performance genetics, lab results integration with ML predictions (XGBoost, Bayesian, LSTM), 90-day health forecasts, and comprehensive 50-100 page PDF reports with personalized action plans
+1. DNA Analysis System - Professional DNA Genomics Suite. Analyzes 609,424+ genetic variants across 23 chromosomes, providing 32 disease risk scores, 19 drug response profiles (pharmacogenomics), 15+ nutrient metabolism insights, ancestry information, athletic performance genetics, lab results integration with ML predictions (XGBoost, Bayesian, LSTM), 90-day health forecasts, and comprehensive 50-100 page PDF reports.
 
 ## Financial Services APIs (Published on RapidAPI)
 2. IBAN & SWIFT Validator - Validates bank accounts for 51,000+ banks across 204 countries
@@ -32,34 +74,20 @@ Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Soma
 7. WhatsReplay - Interactive historical events viewer exploring "what happened on this day in history"
 
 ## Geographic & Infrastructure APIs
-8. Somali Geography & Governance API - First open-source geographic API for Somalia. Maps 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports, and postal codes with GeoJSON support. Comprehensive administrative boundaries, transport infrastructure, and location services
+8. Somali Geography & Governance API - First open-source geographic API for Somalia. Maps 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports, and postal codes with GeoJSON support.
 
 ## Security & Digital Identity
-9. Warya Security Suite - Comprehensive security testing framework with 77 total tools (43 scanners + 30 utilities + 4 advanced modules). 120 powerful scripts covering web applications, mobile apps (APK/IPA), and password security. 36 built-in scanners plus 7 external integrations
-
-10. Somali Digital ID Readiness Toolkit - Open-source toolkit for validating and simulating Somali National ID data with privacy-preserving signed tokens. JSON Schema validation, Ed25519 cryptographic signing, multilingual support (English/Somali), and offline-first architecture
+9. Warya Security Suite - Comprehensive security testing framework with 77 total tools (43 scanners + 30 utilities + 4 advanced modules). 120 powerful scripts covering web applications, mobile apps (APK/IPA), and password security.
+10. Somali Digital ID Readiness Toolkit - Open-source toolkit for validating and simulating Somali National ID data with privacy-preserving signed tokens. JSON Schema validation, Ed25519 cryptographic signing, multilingual support (English/Somali), offline-first architecture.
 
 ## Travel & Automation
-11. FlyMind - AI-powered flight analytics and automation suite. Intelligent flight search with real-time Google Flights scraping, multi-city search, price alerts, flight comparison, and n8n workflow integration with Streamlit interface
+11. FlyMind - AI-powered flight analytics and automation suite. Intelligent flight search with real-time Google Flights scraping, multi-city search, price alerts, flight comparison, and n8n workflow integration.
 
 ## Cultural Preservation
-12. Somali Children's Books - Published on Amazon to help diaspora children learn Somali language and history, preserving cultural heritage
-
-# Contact Information
-Email: hello@abdirahman.net
-Website: https://abdirahman.net
-GitHub: https://github.com/AbdirahmanNomad
-Twitter: @abdirahmanone
-Facebook: https://www.facebook.com/abdirahmanone/
-Instagram: @abdirahmanone
+12. Somali Children's Books - Published on Amazon to help diaspora children learn Somali language and history, preserving cultural heritage.
 
 # Mission & Philosophy
 To make change and create what people can benefit from. Combining technical expertise with cultural awareness to build solutions that solve real problems for businesses and communities while preserving Somali language and heritage.
-
-# Personal Interests
-- Traveling
-- Supporting low-resource language development (especially Somali language preservation and education)
-- Cultural preservation for diaspora communities
 
 # Technologies & Skills
 - Full-stack web development (Next.js, React, TypeScript)
