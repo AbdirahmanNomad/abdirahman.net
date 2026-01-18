@@ -1,0 +1,27 @@
+---
+title: Somali Digital ID Readiness Toolkit
+description: Open-source toolkit for validating and simulating Somali National ID data with privacy-preserving signed tokens. Accelerates digital ID adoption in Somalia with JSON Schema validation, Ed25519 cryptographic signing, and multilingual support (English/Somali).
+date: "2025-06-01"
+url: https://github.com/AbdirahmanNomad/somali-digital-id-toolkit
+published: true
+---
+
+Open-source toolkit for validating and simulating Somali National ID data with privacy-preserving signed tokens. Accelerates digital ID adoption in Somalia with JSON Schema validation, Ed25519 cryptographic signing, and multilingual support (English/Somali).
+
+I created the Somali Digital ID Readiness Toolkit because I recognized a critical need in Somalia's digital transformation - reliable, standards-aligned tools for identity verification that work in low-connectivity environments and don't require expensive infrastructure or paid APIs. Traditional identity verification solutions are designed for well-connected, high-resource environments, but Somalia needs solutions that work offline-first and are accessible to developers, NGOs, and government teams.
+
+So I built this comprehensive toolkit for simulating and validating Somali National ID data with privacy-preserving signed verification tokens. The toolkit uses JSON Schema validation based on official NIRA (National Identity and Registration Authority) data structures, persistent SQLite-backed session management for storing ID submissions and signed results, Ed25519 cryptographic signing for tamper-proof verification tokens, and multilingual support for both English and Somali localized messages.
+
+One feature I'm particularly proud of is the privacy-preserving design. The toolkit uses cryptographic signing with Ed25519 to create tamper-proof verification tokens without exposing sensitive personal data. This means developers can verify identities without storing or transmitting full ID information, which is critical for privacy and security in digital identity systems.
+
+The offline-first architecture means the core verification functionality works without internet connectivity - no reliance on external APIs or cloud services. This is essential for Somalia's infrastructure challenges, where connectivity can be unreliable, but identity verification is still needed for essential services like healthcare, education, and financial inclusion.
+
+The toolkit includes deterministic mock verification rules with expiry validation, encoded ID checksum validation, and realistic test datasets accessible via API for development and testing. The lightweight web UI provides an interactive interface for testing validation flows, managing sessions, and viewing signed tokens. Sample Somali National ID JSON data is available through the API, making it easy for developers to understand the expected format and test their integrations.
+
+The multilingual support ensures the toolkit is accessible to both English-speaking developers and Somali-speaking users. All validation messages, error responses, and UI elements are localized, making it truly inclusive for Somalia's diverse user base.
+
+I built this because I believe digital identity is foundational for Somalia's development - without reliable identity verification, you can't build secure financial services, healthcare systems, education platforms, or government services. But these tools need to be open-source, accessible, and designed for Somalia's specific challenges, not adapted from solutions built for completely different contexts.
+
+The toolkit is modular and extendable, making it easy to add new flows like biometric verification, attestation workflows, and integration with Somalia's national ID issuance systems. It's designed to accelerate digital ID adoption by giving developers, NGOs, and government teams a reliable starting point they can build upon.
+
+Available on [GitHub](https://github.com/AbdirahmanNomad/somali-digital-id-toolkit) as open-source with MIT license, including FastAPI backend, SQLite database, web UI, comprehensive API documentation, and contribution guidelines. The project emphasizes privacy, security, inclusivity, and offline-first design principles.

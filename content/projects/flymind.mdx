@@ -1,0 +1,27 @@
+---
+title: FlyMind - AI-Powered Flight Analytics & Automation Suite
+description: Intelligent flight data platform combining AI-driven search, real-time Google Flights scraping, price analytics, and automation tools. Features multi-city search, price alerts, flight comparison, and n8n workflow integration with Streamlit interface.
+date: "2025-11-01"
+url: https://github.com/AbdirahmanNomad/flymind
+published: true
+---
+
+Intelligent flight data platform combining AI-driven search, real-time Google Flights scraping, price analytics, and automation tools. Features multi-city search, price alerts, flight comparison, and n8n workflow integration with Streamlit interface.
+
+I created FlyMind because I was frustrated with existing flight search tools - they were either too simple and didn't give you enough information, or too complex and required manual work for every search. I wanted to build something that combines the intelligence of AI with real-time flight data to make finding and booking flights easier, whether you're a developer building automation workflows or a traveler planning a trip.
+
+So I built FlyMind - an intelligent flight data platform that combines AI-driven search, real-time Google Flights scraping, price analytics, and automation tools. The platform uses FastAPI for high-performance REST API endpoints, Playwright for browser automation to scrape real-time flight data, Streamlit for an interactive dashboard interface, and integrates with n8n for workflow automation.
+
+One feature I'm particularly proud of is the multi-city search capability. Most flight search APIs only support simple one-way or round-trip searches, but FlyMind supports complex multi-city itineraries with 2-5 segments. You can plan a trip like "New York → Los Angeles → San Francisco → Seattle" all in one search, and the system handles city name recognition, airport code conversion, and date parsing automatically.
+
+The AI-powered search feature uses natural language processing to understand queries like "Find me the cheapest flight from Paris to Tokyo next weekend" and automatically extracts the origin, destination, dates, and preferences. The system then executes a real flight search with the parsed parameters, making it perfect for chatbots and voice assistants that need to handle natural language flight queries.
+
+The platform includes comprehensive price analytics with flight comparison features that let you compare multiple searches side-by-side, view price trends with charts, and get recommendations on the best time to book. The search history feature automatically tracks all your searches with unique search IDs, so you can revisit previous results or share them with others.
+
+Price alerts let you monitor specific routes for price drops, with support for multiple notification channels including email and webhooks. This makes it perfect for automation workflows - you can set up an n8n workflow that monitors prices and sends notifications to Slack, Discord, or any other service when prices drop below a threshold.
+
+The real-time data scraping uses Playwright with anti-detection techniques to fetch live flight prices directly from Google Flights, ensuring you always have current data. The system includes Redis caching for faster repeated searches, async/await architecture for non-blocking operations, and comprehensive error handling with proper HTTP status codes.
+
+I built this because I believe flight search should be intelligent, automated, and accessible. Whether you're a developer building a travel app, an automation enthusiast creating n8n workflows, or a traveler who wants better tools for finding flights, FlyMind provides the platform and APIs you need.
+
+Available on [GitHub](https://github.com/AbdirahmanNomad/flymind) as open-source, with FastAPI backend, Streamlit interface, Docker deployment support, and comprehensive API documentation. The project includes test suites with 12/12 features tested and verified, making it production-ready for developers and travelers alike.

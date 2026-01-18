@@ -72,6 +72,24 @@ Digital money transfer service based in Sweden helping immigrants send money hom
 #### WhatsReplay
 Interactive historical events viewer exploring "what happened on this day in history" with filtering by themes (Wars & Conflicts, Discoveries & Science, Politics & Government, Arts & Culture, etc.).
 
+### Geographic & Infrastructure APIs
+
+#### Somali Geography & Governance API
+First open-source geographic API for Somalia mapping **36 regions**, **148 districts**, **26,046+ roads**, **23 airports**, **8 ports**, and postal codes. Comprehensive administrative boundaries, transport infrastructure, and location services with GeoJSON support. All data filtered to Somalia bounding box for accuracy.
+
+### Security & Digital Identity
+
+#### Warya Security Suite
+Comprehensive security testing framework with **77 total tools** (**43 scanners + 30 utilities + 4 advanced modules**). **120 powerful scripts** covering web applications, mobile apps (APK/IPA), and password security. **36 built-in scanners** plus **7 external integrations**. Designed for authorized security testing, bug bounties, and educational use.
+
+#### Somali Digital ID Readiness Toolkit
+Open-source toolkit for validating and simulating Somali National ID data with **privacy-preserving signed tokens**. JSON Schema validation, **Ed25519 cryptographic signing**, multilingual support (English/Somali), and **offline-first architecture** for low-connectivity environments. Accelerates digital ID adoption in Somalia.
+
+### Travel & Automation
+
+#### FlyMind - AI-Powered Flight Analytics Suite
+Intelligent flight data platform combining **AI-driven search**, real-time Google Flights scraping, **price analytics**, and automation tools. Features **multi-city search** (2-5 segments), **price alerts**, **flight comparison**, and **n8n workflow integration** with Streamlit interface. All 12 features tested and verified (100% pass rate).
+
 ### Cultural Preservation
 
 #### Somali Children's Books

@@ -1,0 +1,23 @@
+---
+title: Somali Geography & Governance API
+description: The first open-source geographic API for Somalia - mapping 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports, and postal codes. Comprehensive administrative boundaries, transport infrastructure, and location services with GeoJSON support.
+date: "2025-07-01"
+url: https://github.com/AbdirahmanNomad/somali-geo-api
+published: true
+---
+
+The first open-source geographic API for Somalia - mapping 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports, and postal codes. Comprehensive administrative boundaries, transport infrastructure, and location services with GeoJSON support.
+
+I created the Somali Geography & Governance API because I kept running into a frustrating problem - there simply wasn't comprehensive geographic data available for Somalia in a usable, API-friendly format. Developers building applications for Somalia, researchers studying the region, and organizations working in humanitarian contexts all needed reliable geographic data, but existing sources were fragmented, outdated, or required expensive licenses.
+
+So I built the first comprehensive open-source geographic API specifically for Somalia. The API covers 36 regions and 148 districts with full GeoJSON geometries from GADM administrative boundaries, 26,046+ roads from OpenStreetMap covering major cities, 23 verified airports (all Somalia-only, filtered to ensure accuracy), 8 major Somali ports including Mogadishu, Berbera, Bosaso, and Kismayo, 17 checkpoints for border and security locations, and Google Open Location Code (PlusCodes) support for postal addressing.
+
+One feature I'm particularly proud of is the geographic filtering. I made sure all data is strictly filtered to Somalia's bounding box (latitude 1.5° to 11.5°, longitude 41.0° to 51.5°) - this means no non-Somalia locations slip through, which is critical for applications that need accurate Somalia-specific data. All transport data (airports, ports, checkpoints) goes through point-in-polygon validation against Somalia's region polygons to ensure accuracy.
+
+The API serves data in clean, structured GeoJSON format, making it easy to integrate with mapping libraries like Leaflet, Mapbox, or Google Maps. It includes features like fuzzy place name search with aliases (so searching for "Xamar" finds "Mogadishu"), nearby queries for finding roads and places within specific distances, administrative boundary lookups, and bulk export functionality for downloading complete datasets.
+
+The data sources are all authoritative and open - GADM for administrative boundaries, OpenStreetMap for roads and transport infrastructure, and manual verification for ports. All data follows ODbL (Open Database License) licensing, making it free and open for developers, researchers, and communities to use.
+
+I built this because I believe open geographic data is essential for development, research, and humanitarian work in Somalia. Whether you're building a logistics platform that needs to map routes, a humanitarian organization tracking service delivery, or a developer creating location-based features, you should have access to reliable, accurate geographic data without barriers or high costs.
+
+Available on [GitHub](https://github.com/AbdirahmanNomad/somali-geo-api) as open-source, with FastAPI backend, SQLite database (with PostGIS migration path), and comprehensive API documentation. The project includes Docker deployment, CI/CD workflows, and is actively maintained with contributions welcome.
