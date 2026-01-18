@@ -98,11 +98,21 @@ Published on Amazon to help diaspora children learn Somali language and history.
 ## Technologies & Skills
 
 ### Development
-- **Frontend:** Next.js 13, React 18, TypeScript, Tailwind CSS
-- **Backend:** Node.js, Next.js API Routes, Serverless Functions
+- **Frontend:** Next.js 13, React 18, TypeScript, Tailwind CSS, HTML5, CSS3, MDX, Server Components
+- **Backend:** Python, FastAPI, Node.js, Express.js, REST APIs, SQLite, PostgreSQL, PostGIS, Redis, Upstash
+- **API Development:** RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2
 - **Database:** Upstash Redis (optional, for analytics)
-- **Content Management:** Contentlayer, MDX
+- **Content Management:** Contentlayer, MDX (for projects and blog posts)
+- **Tools & Platforms:** Git, GitHub, Docker, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
 - **Deployment:** Netlify, Vercel
+
+### Machine Learning & AI
+- Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration
+- Natural Language Processing, Computer Vision, Custom Algorithms
+
+### Security & Cryptography
+- Cybersecurity, Penetration Testing, Security Auditing, Ed25519, Cryptography
+- Authentication, Authorization, Data Encryption
 
 ### Specializations
 - Full-stack web development
@@ -113,6 +123,8 @@ Published on Amazon to help diaspora children learn Somali language and history.
 - Fintech innovation
 - Information Technology
 - Cybersecurity
+- Geographic APIs and mapping
+- Cultural preservation and education
 
 ## Getting Started
 
@@ -168,9 +180,11 @@ Or connect through the [Vercel dashboard](https://vercel.com) for automatic depl
 
 - ✨ **Modern Next.js 13** - App Router architecture for optimal performance
 - 🎨 **Beautiful UI** - Tailwind CSS with custom animations and particle effects
-- 📝 **MDX Content** - Easy content management with Contentlayer for projects
+- 📝 **MDX Content** - Easy content management with Contentlayer for projects and blog posts
 - 🔄 **Dynamic Projects** - Featured projects rotate daily for variety
-- 🤖 **SEO Optimized** - Complete metadata, robots.txt, and ai.txt for search engines and AI systems
+- 📰 **Blog & Updates** - Project updates, tech insights, tutorials, and announcements
+- 🛠️ **Skills Showcase** - Professional skills & technologies display with color-coded categories
+- 🤖 **SEO Optimized** - Complete metadata, robots.txt, ai.txt, and llms.txt for search engines and AI systems
 - 📱 **Fully Responsive** - Works perfectly on mobile, tablet, and desktop
 - ⚡ **Performance** - Optimized for fast page loads and Core Web Vitals
 - 🔒 **Security** - Security headers configured (HSTS, CSP, XSS protection)
@@ -192,7 +206,10 @@ Or connect through the [Vercel dashboard](https://vercel.com) for automatic depl
 ```
 abdirahman.net/
 ├── app/                      # Next.js App Router
-│   ├── about/               # About/Resume page
+│   ├── about/               # About/Resume page with Skills & Technologies showcase
+│   ├── blog/                # Blog listing and post pages
+│   │   ├── [slug]/         # Dynamic blog post pages
+│   │   └── page.tsx        # Blog listing page
 │   ├── contact/             # Contact page with social links
 │   ├── projects/            # Projects listing and detail pages
 │   │   ├── [slug]/         # Dynamic project pages
@@ -204,21 +221,23 @@ abdirahman.net/
 │   │   ├── nav.tsx         # Navigation component
 │   │   └── particles.tsx   # Particle animation background
 │   ├── layout.tsx           # Root layout with metadata
-│   └── page.tsx             # Homepage
+│   ├── page.tsx             # Homepage
+│   └── sitemap.ts           # Dynamic sitemap generation
 ├── content/                  # MDX content files
+│   ├── blog/                # Blog post markdown files
+│   │   └── welcome-to-my-blog.mdx
 │   └── projects/            # Project markdown files
 │       ├── dna-analysis-system.mdx
 │       ├── iban-swift-validator.mdx
 │       ├── email-validator-api.mdx
-│       └── ... (8 total projects)
+│       └── ... (12 total projects)
 ├── public/                   # Static assets
-│   ├── ai.txt              # AI crawler information
+│   ├── ai.txt              # AI crawler information (365i spec)
+│   ├── llms.txt            # LLM-specific manifest (Markdown spec)
 │   ├── robots.txt          # Search engine instructions
+│   ├── og.png              # Open Graph image (1200x628)
 │   ├── favicon.png
 │   └── fonts/              # Custom fonts
-├── pages/                    # API routes
-│   └── api/
-│       └── incr.ts         # Page view tracking (optional)
 ├── util/                     # Utility functions
 │   ├── redis.ts            # Redis client helper
 │   └── mouse.ts            # Mouse position utility
@@ -232,8 +251,12 @@ abdirahman.net/
 This website is optimized for both search engines and AI systems:
 
 - **Comprehensive Metadata** - Open Graph, Twitter Cards, and standard meta tags
+- **Schema.org Structured Data** - Person, WebSite, ProfilePage, BlogPosting, and SoftwareApplication schemas
 - **robots.txt** - Search engine crawler instructions
-- **ai.txt** - Structured information for AI systems and language models
+- **ai.txt** - Structured information for AI systems following 365i AI Visibility Definition spec
+- **llms.txt** - LLM-specific manifest following Markdown specification
+- **Dynamic Sitemap** - XML sitemap including all pages, projects, and blog posts
+- **Projects JSON Feed** - Machine-readable JSON API endpoint (`/projects.json`) with Schema.org CollectionPage
 - **Semantic HTML** - Proper heading hierarchy and semantic elements
 - **Performance** - Optimized images, code splitting, and fast loading times
 - **Accessibility** - ARIA labels, keyboard navigation, screen reader support

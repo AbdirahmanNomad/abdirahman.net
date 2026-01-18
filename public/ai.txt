@@ -92,7 +92,30 @@ Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Soma
 To make change and create what people can benefit from. Combining technical expertise with cultural awareness to build solutions that solve real problems for businesses and communities while preserving Somali language and heritage.
 
 # Technologies & Skills
-- Full-stack web development (Next.js, React, TypeScript)
+
+## Frontend
+Next.js, React, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3, MDX, Server Components
+
+## Backend
+Python, FastAPI, Node.js, Express.js, REST APIs, SQLite, PostgreSQL, PostGIS, Redis, Upstash
+
+## API Development
+RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2, API Documentation
+
+## Tools & Platforms
+Git, GitHub, Docker, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
+
+## Machine Learning & AI
+Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Natural Language Processing, Computer Vision, Custom Algorithms
+
+## Security & Cryptography
+Cybersecurity, Penetration Testing, Security Auditing, Ed25519, Cryptography, Authentication, Authorization, Data Encryption
+
+## Specialized Skills
+Fintech, Healthcare Technology, Pharmacogenomics, Geographic APIs, Media Production, Marketing, SEO Optimization, Content Management
+
+## Core Expertise
+- Full-stack web development
 - API development and integration
 - Financial services and payment systems
 - Media production and content creation

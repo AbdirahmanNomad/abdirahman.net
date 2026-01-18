@@ -28,8 +28,8 @@ Abdirahman Ahmed (also known as Maano) is a Somali Swedish professional with exp
 
 ## API Endpoints
 
-- [Projects JSON Feed](https://abdirahman.net/projects.json): Machine-readable JSON feed of all projects with metadata, URLs, and descriptions
-- [Sitemap](https://abdirahman.net/sitemap.xml): XML sitemap of all pages and projects
+- [Projects JSON Feed](https://abdirahman.net/projects.json): Machine-readable JSON feed of all projects with metadata, URLs, and descriptions (Schema.org CollectionPage)
+- [Sitemap](https://abdirahman.net/sitemap.xml): XML sitemap of all pages, projects, and blog posts
 
 ## Contact & Social
 
