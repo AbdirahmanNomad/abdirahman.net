@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
@@ -10,6 +11,27 @@ import { getRedisClient } from "@/util/redis";
 const redis = getRedisClient();
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+	title: "Projects",
+	description: "Projects by Abdirahman Ahmed - DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, WhatsApp Replay, Somali children's books, and more. Full-stack developer and entrepreneur originally from Somalia, based in Sweden.",
+	keywords: [
+		"Abdirahman Ahmed projects",
+		"DNA Analysis System",
+		"IBAN SWIFT Validator API",
+		"TransferGalaxy",
+		"WhatsApp Replay",
+		"Somali children books",
+		"fintech API",
+		"healthcare technology",
+		"API developer Sweden",
+	],
+	openGraph: {
+		title: "Projects by Abdirahman Ahmed",
+		description: "DNA Analysis System, IBAN & SWIFT Validator, TransferGalaxy, and more projects by Abdirahman Ahmed",
+		url: "https://abdirahman.net/projects",
+	},
+};
 export default async function ProjectsPage() {
   const viewsArray = await redis.mget(
     ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),

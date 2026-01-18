@@ -4,7 +4,7 @@
 
 # Abdirahman Ahmed (Maano)
 
-**Somali Swedish Media Mogul | Full-Stack Developer | API Creator | Entrepreneur**
+**Full-Stack Developer & Entrepreneur**
 
 Personal portfolio website showcasing projects in healthcare technology, financial services APIs, fintech, and cultural preservation.
 
@@ -21,7 +21,7 @@ Personal portfolio website showcasing projects in healthcare technology, financi
 
 ## About
 
-This is the personal portfolio website of **Abdirahman Ahmed** (also known as **Maano**), a Somali Swedish media mogul, full-stack developer, API creator, and entrepreneur based in Sweden. The website showcases projects across healthcare technology, financial services, fintech, media, and cultural preservation.
+This is the personal portfolio website of **Abdirahman Ahmed** (also known as **Maano**), a full-stack developer and entrepreneur originally from Somalia, based in Sweden. The website showcases projects across healthcare technology, financial services, fintech, media, and cultural preservation.
 
 Abdirahman Ahmed specializes in building APIs, developing healthcare technology solutions, creating fintech platforms, and preserving Somali culture through educational content. With a background in Cybersecurity, media production, and full-stack development, he creates solutions that benefit businesses and diaspora communities.
 
@@ -239,7 +239,7 @@ Abdirahman Ahmed (Maano) is a Somali Swedish professional with expertise in:
 - **API Development** - Financial services, validation APIs
 - **Cultural Preservation** - Somali language and heritage education
 
-Based in Sweden, fluent in Somali, English, and Swedish. Holds a degree in Cybersecurity. Passionate about creating solutions that benefit businesses and diaspora communities while preserving Somali culture.
+Originally from Somalia, based in Sweden. Fluent in Somali, English, and Swedish. Holds a degree in Cybersecurity. Passionate about creating solutions that benefit businesses and diaspora communities while preserving Somali culture.
 
 ## License
 

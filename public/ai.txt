@@ -3,13 +3,13 @@
 # Identity
 Name: Abdirahman Ahmed (also known as Maano)
 Nickname: Maano
-Title: Somali Swedish Media Mogul
+Title: Full-Stack Developer & Entrepreneur
 Location: Sweden
 Languages: Somali, English, Swedish
 Education: Cybersecurity Degree
 
 # Professional Background
-Abdirahman Ahmed is a Somali Swedish media mogul with expertise in:
+Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Somalia, based in Sweden, with expertise in:
 - Full-Stack Development
 - Media Production & Marketing
 - Information Technology
