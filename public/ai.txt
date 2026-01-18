@@ -106,7 +106,10 @@ RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JW
 Git, GitHub, Docker, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
 
 ## Machine Learning & AI
-Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Natural Language Processing, Computer Vision, Custom Algorithms
+Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod, Natural Language Processing, Computer Vision, Custom Algorithms
+
+## Design & Creative Tools
+Photoshop, Illustrator, Graphic Design, UI/UX Design, Visual Design, Brand Design, Digital Art
 
 ## Security & Cryptography
 Cybersecurity, Penetration Testing, Security Auditing, Ed25519, Cryptography, Authentication, Authorization, Data Encryption
@@ -119,6 +122,7 @@ Fintech, Healthcare Technology, Pharmacogenomics, Geographic APIs, Media Product
 - API development and integration
 - Financial services and payment systems
 - Media production and content creation
+- Graphic design and visual branding
 - Mobile and web application development
 - Cybersecurity (degree holder)
 - Marketing and brand development

@@ -98,17 +98,20 @@ Published on Amazon to help diaspora children learn Somali language and history.
 ## Technologies & Skills
 
 ### Development
-- **Frontend:** Next.js 13, React 18, TypeScript, Tailwind CSS, HTML5, CSS3, MDX, Server Components
+- **Frontend:** Next.js 13, React 18, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3, MDX, Server Components
 - **Backend:** Python, FastAPI, Node.js, Express.js, REST APIs, SQLite, PostgreSQL, PostGIS, Redis, Upstash
-- **API Development:** RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2
-- **Database:** Upstash Redis (optional, for analytics)
+- **API Development:** RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2, API Documentation
+- **Database:** SQLite, PostgreSQL, PostGIS, Upstash Redis (optional, for analytics)
 - **Content Management:** Contentlayer, MDX (for projects and blog posts)
 - **Tools & Platforms:** Git, GitHub, Docker, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
 - **Deployment:** Netlify, Vercel
 
 ### Machine Learning & AI
-- Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration
+- Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod
 - Natural Language Processing, Computer Vision, Custom Algorithms
+
+### Design & Creative Tools
+- Photoshop, Illustrator, Graphic Design, UI/UX Design, Visual Design, Brand Design, Digital Art
 
 ### Security & Cryptography
 - Cybersecurity, Penetration Testing, Security Auditing, Ed25519, Cryptography
@@ -123,6 +126,7 @@ Published on Amazon to help diaspora children learn Somali language and history.
 - Fintech innovation
 - Information Technology
 - Cybersecurity
+- Graphic design and visual branding
 - Geographic APIs and mapping
 - Cultural preservation and education
 
