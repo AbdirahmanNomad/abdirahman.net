@@ -67,12 +67,11 @@ export default function About() {
 											{["Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MDX", "Server Components"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-blue-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
@@ -88,12 +87,11 @@ export default function About() {
 											{["Python", "FastAPI", "Node.js", "Express.js", "REST APIs", "SQLite", "PostgreSQL", "PostGIS", "Redis", "Upstash"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-green-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
@@ -109,12 +107,11 @@ export default function About() {
 											{["RapidAPI", "OpenAPI", "GraphQL", "REST", "API Gateway", "Rate Limiting", "Authentication", "JWT", "OAuth2", "API Documentation"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-purple-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
@@ -130,12 +127,11 @@ export default function About() {
 											{["Git", "GitHub", "Docker", "Netlify", "Vercel", "Playwright", "n8n", "Streamlit", "CI/CD", "Serverless"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-orange-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
@@ -151,12 +147,11 @@ export default function About() {
 											{["Machine Learning", "XGBoost", "LSTM", "Deep Learning", "AI Integration", "Natural Language Processing", "Computer Vision", "Custom Algorithms"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-cyan-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
@@ -172,12 +167,11 @@ export default function About() {
 											{["Cybersecurity", "Penetration Testing", "Security Auditing", "Ed25519", "Cryptography", "Authentication", "Authorization", "Data Encryption"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-yellow-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-yellow-500/0 to-yellow-500/0 group-hover:from-yellow-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
@@ -193,12 +187,11 @@ export default function About() {
 											{["Fintech", "Healthcare Technology", "Pharmacogenomics", "Geographic APIs", "Media Production", "Marketing", "SEO Optimization", "Content Management"].map((tech) => (
 												<div
 													key={tech}
-													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-red-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/10"
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
 												>
-													<span className="text-zinc-300 text-sm font-medium group-hover:text-red-400 transition-colors">
+													<span className="text-zinc-300 text-sm font-medium">
 														{tech}
 													</span>
-													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-red-500/0 to-red-500/0 group-hover:from-red-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
 												</div>
 											))}
 										</div>
