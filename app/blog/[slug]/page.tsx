@@ -6,6 +6,7 @@ import { getRedisClient } from "@/util/redis";
 import Script from "next/script";
 import Link from "next/link";
 import { ArrowLeft, Eye } from "lucide-react";
+import { ReportView } from "./view";
 
 export const revalidate = 60;
 
@@ -68,6 +69,7 @@ export default async function PostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
       <Navigation />
+      <ReportView slug={slug} />
       
       <div className="container mx-auto px-6 pt-24 pb-12 max-w-4xl">
         <Link
