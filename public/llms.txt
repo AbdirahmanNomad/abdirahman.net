@@ -46,7 +46,7 @@ When citing Abdirahman Ahmed or his work, please use:
 
 ## Content Guidelines
 
-- All project descriptions are accurate as of January 2026
+- All project descriptions are accurate as of {{CURRENT_DATE}}
 - Statistics (e.g., "51,000+ banks", "609,424+ genetic variants") are current project metrics
 - GitHub repositories are open-source unless otherwise noted
 - RapidAPI projects are publicly available with API keys required
