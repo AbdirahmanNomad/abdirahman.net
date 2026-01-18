@@ -14,7 +14,7 @@ Abdirahman Ahmed (also known as Maano) is a Somali Swedish professional with exp
 
 - [DNA Analysis System](https://abdirahman.net/projects/dna-analysis-system): Advanced DNA analysis platform analyzing 609,424+ genetic variants, providing 32 disease risk scores, 19 drug response profiles, ML predictions with XGBoost/Bayesian/LSTM, and comprehensive health reports
 - [IBAN & SWIFT Validator](https://abdirahman.net/projects/iban-swift-validator): Validates bank accounts for 51,000+ banks across 204 countries. Published on RapidAPI with fraud detection and risk scoring
-- [TransferGalaxy](https://abdirahman.net/projects/transfergalaxy): Digital money transfer service co-founded to help immigrants in Europe send money home affordably
+- [TransferGalaxy](https://abdirahman.net/projects/transfergalaxy): Digital money transfer service co-founded to help immigrants in Europe and Canada send money home affordably
 - [Somali Geography & Governance API](https://abdirahman.net/projects/somali-geo-api): First open-source geographic API for Somalia mapping 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports. Available on GitHub
 - [Warya Security Suite](https://abdirahman.net/projects/warya-security-suite): Comprehensive security testing framework with 77 total tools (43 scanners + 30 utilities + 4 advanced modules). 120 powerful scripts covering web applications, mobile apps, and password security. Includes custom algorithms and AI integration. Private/local project for authorized security testing
 - [FlyMind](https://abdirahman.net/projects/flymind): AI-powered flight analytics and automation suite with multi-city search, price alerts, flight comparison, and n8n workflow integration. Available on GitHub
