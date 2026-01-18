@@ -179,8 +179,36 @@ export default function RootLayout({
     },
   };
 
+  // ProfilePage Schema - Official profile page
+  const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    name: "Abdirahman Ahmed - Official Profile",
+    url: "https://abdirahman.net",
+    mainEntity: {
+      "@type": "Person",
+      "@id": "https://abdirahman.net#person",
+      name: "Abdirahman Ahmed",
+      alternateName: "Maano",
+      url: "https://abdirahman.net",
+      image: "https://abdirahman.net/og.png",
+      jobTitle: "Full-Stack Developer & Entrepreneur",
+      description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
+      sameAs: [
+        "https://github.com/AbdirahmanNomad",
+        "https://twitter.com/abdirahmanone",
+        "https://www.facebook.com/abdirahmanone/",
+        "https://instagram.com/abdirahmanone",
+      ],
+    },
+    about: {
+      "@type": "Thing",
+      name: "Full-Stack Development, API Development, Healthcare Technology, Fintech, Security Testing, Cultural Preservation",
+    },
+  };
+
   // Combined schemas array
-  const schemas = [personSchema, websiteSchema];
+  const schemas = [personSchema, websiteSchema, profilePageSchema];
 
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
