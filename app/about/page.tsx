@@ -64,7 +64,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Frontend</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"].map((tech) => (
+											{["Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MDX", "Server Components"].map((tech) => (
 												<div
 													key={tech}
 													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10"
@@ -85,7 +85,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Backend</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Python", "FastAPI", "Node.js", "SQLite", "PostgreSQL", "PostGIS", "Redis", "REST APIs"].map((tech) => (
+											{["Python", "FastAPI", "Node.js", "Express.js", "REST APIs", "SQLite", "PostgreSQL", "PostGIS", "Redis", "Upstash"].map((tech) => (
 												<div
 													key={tech}
 													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
@@ -106,7 +106,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">API Development</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["RapidAPI", "OpenAPI", "GraphQL", "REST", "API Gateway", "Rate Limiting", "Authentication"].map((tech) => (
+											{["RapidAPI", "OpenAPI", "GraphQL", "REST", "API Gateway", "Rate Limiting", "Authentication", "JWT", "OAuth2", "API Documentation"].map((tech) => (
 												<div
 													key={tech}
 													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10"
@@ -127,7 +127,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Tools & Platforms</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Git", "GitHub", "Docker", "Netlify", "Vercel", "Playwright", "Machine Learning", "AI Integration"].map((tech) => (
+											{["Git", "GitHub", "Docker", "Netlify", "Vercel", "Playwright", "n8n", "Streamlit", "CI/CD", "Serverless"].map((tech) => (
 												<div
 													key={tech}
 													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/10"
@@ -141,6 +141,48 @@ export default function About() {
 										</div>
 									</div>
 
+									{/* Machine Learning & AI */}
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-cyan-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Machine Learning & AI</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+											{["Machine Learning", "XGBoost", "LSTM", "Deep Learning", "AI Integration", "Natural Language Processing", "Computer Vision", "Custom Algorithms"].map((tech) => (
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-cyan-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
+											))}
+										</div>
+									</div>
+
+									{/* Security & Cryptography */}
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-yellow-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Security & Cryptography</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+											{["Cybersecurity", "Penetration Testing", "Security Auditing", "Ed25519", "Cryptography", "Authentication", "Authorization", "Data Encryption"].map((tech) => (
+												<div
+													key={tech}
+													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/10"
+												>
+													<span className="text-zinc-300 text-sm font-medium group-hover:text-yellow-400 transition-colors">
+														{tech}
+													</span>
+													<div className="absolute inset-0 rounded-lg bg-gradient-to-br from-yellow-500/0 to-yellow-500/0 group-hover:from-yellow-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
+												</div>
+											))}
+										</div>
+									</div>
+
 									{/* Specialized Skills */}
 									<div>
 										<div className="flex items-center gap-2 mb-4">
@@ -148,7 +190,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Specialized Skills</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Cybersecurity", "Fintech", "Healthcare Technology", "Media Production", "Marketing", "SEO Optimization"].map((tech) => (
+											{["Fintech", "Healthcare Technology", "Pharmacogenomics", "Geographic APIs", "Media Production", "Marketing", "SEO Optimization", "Content Management"].map((tech) => (
 												<div
 													key={tech}
 													className="group relative px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50 hover:border-red-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/10"
