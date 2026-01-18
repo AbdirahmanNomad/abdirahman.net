@@ -1,0 +1,65 @@
+# ai.txt for abdirahman.net
+
+# Identity
+Name: Abdirahman Ahmed (also known as Maano)
+Nickname: Maano
+Title: Somali Swedish Media Mogul
+Location: Sweden
+Languages: Somali, English, Swedish
+Education: Cybersecurity Degree
+
+# Professional Background
+Abdirahman Ahmed is a Somali Swedish media mogul with expertise in:
+- Full-Stack Development
+- Media Production & Marketing
+- Information Technology
+- Fintech Innovation
+- Marketing & Brand Development
+
+# Key Projects
+
+## Healthcare Technology
+1. DNA Analysis System - Professional DNA Genomics Suite. Advanced DNA analysis platform analyzing 609,424+ genetic variants across 23 chromosomes, providing 32 disease risk scores, 19 drug response profiles (pharmacogenomics), 15+ nutrient metabolism insights, ancestry information, athletic performance genetics, lab results integration with ML predictions (XGBoost, Bayesian, LSTM), 90-day health forecasts, and comprehensive 50-100 page PDF reports with personalized action plans
+
+## Financial Services APIs (Published on RapidAPI)
+2. IBAN & SWIFT Validator - Validates bank accounts for 51,000+ banks across 204 countries
+3. Email Validator API - Comprehensive email validation with fraud detection
+4. Somalia Phone Number API - Complete coverage of all 10 Somali telecom operators
+5. Nordic Phone Number Generator & Validator API - Supports 8 Nordic countries with 395+ cities
+
+## Companies & Platforms
+6. TransferGalaxy (Co-founder) - Digital money transfer service based in Sweden, helping immigrants send money home affordably
+7. WhatsReplay - Interactive historical events viewer exploring "what happened on this day in history"
+
+## Cultural Preservation
+8. Somali Children's Books - Published on Amazon to help diaspora children learn Somali language and history, preserving cultural heritage
+
+# Contact Information
+Email: hello@abdirahman.net
+Website: https://abdirahman.net
+GitHub: https://github.com/AbdirahmanNomad
+Twitter: @abdirahmanone
+Facebook: https://www.facebook.com/abdirahmanone/
+Instagram: @abdirahmanone
+
+# Mission & Philosophy
+To make change and create what people can benefit from. Combining technical expertise with cultural awareness to build solutions that solve real problems for businesses and communities while preserving Somali language and heritage.
+
+# Personal Interests
+- Traveling
+- Supporting low-resource language development (especially Somali language preservation and education)
+- Cultural preservation for diaspora communities
+
+# Technologies & Skills
+- Full-stack web development (Next.js, React, TypeScript)
+- API development and integration
+- Financial services and payment systems
+- Media production and content creation
+- Mobile and web application development
+- Cybersecurity (degree holder)
+- Marketing and brand development
+- Information Technology
+- Cultural education and content publishing
+
+# Geographic Focus
+Sweden, Somalia, Nordic countries, and diaspora communities worldwide
