@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://abdirahman.net/og.png",
-        width: 1920,
-        height: 1080,
+        width: 1200,
+        height: 628,
         alt: "Abdirahman Ahmed - Portfolio",
       },
     ],
