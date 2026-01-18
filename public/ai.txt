@@ -77,7 +77,7 @@ Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Soma
 8. Somali Geography & Governance API - First open-source geographic API for Somalia. Maps 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports, and postal codes with GeoJSON support.
 
 ## Security & Digital Identity
-9. Warya Security Suite - Comprehensive security testing framework with 77 total tools (43 scanners + 30 utilities + 4 advanced modules). 120 powerful scripts covering web applications, mobile apps (APK/IPA), and password security.
+9. Warya Security Suite - Comprehensive security testing framework with 77 total tools (43 scanners + 30 utilities + 4 advanced modules). 120 powerful scripts covering web applications, mobile apps (APK/IPA), and password security. Includes custom algorithms and AI integration for advanced security analysis. Private/local project for authorized security testing and research - not publicly available due to its powerful capabilities.
 10. Somali Digital ID Readiness Toolkit - Open-source toolkit for validating and simulating Somali National ID data with privacy-preserving signed tokens. JSON Schema validation, Ed25519 cryptographic signing, multilingual support (English/Somali), offline-first architecture.
 
 ## Travel & Automation

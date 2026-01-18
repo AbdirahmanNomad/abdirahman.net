@@ -119,7 +119,7 @@ function getKeywords(slug: string): string {
     "transfergalaxy": "Money transfer, fintech, payments, co-founded",
     "whatsreplay": "History, education, historical events",
     "somali-geo-api": "Geographic API, Somalia, geography, open-source, GitHub",
-    "warya-security-suite": "Security testing, pentesting, cybersecurity, GitHub",
+    "warya-security-suite": "Security testing, pentesting, cybersecurity, custom algorithms, AI integration, private project",
     "flymind": "Flight search, AI, travel, automation, GitHub",
     "somali-digital-id-toolkit": "Digital identity, ID validation, security, open-source, GitHub",
     "somali-children-books": "Education, cultural preservation, books, Amazon",

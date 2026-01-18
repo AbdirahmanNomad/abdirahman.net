@@ -80,7 +80,7 @@ First open-source geographic API for Somalia mapping **36 regions**, **148 distr
 ### Security & Digital Identity
 
 #### Warya Security Suite
-Comprehensive security testing framework with **77 total tools** (**43 scanners + 30 utilities + 4 advanced modules**). **120 powerful scripts** covering web applications, mobile apps (APK/IPA), and password security. **36 built-in scanners** plus **7 external integrations**. Designed for authorized security testing, bug bounties, and educational use.
+Comprehensive security testing framework with **77 total tools** (**43 scanners + 30 utilities + 4 advanced modules**). **120 powerful scripts** covering web applications, mobile apps (APK/IPA), and password security. **36 built-in scanners** plus **7 external integrations**. Includes custom algorithms and AI integration for advanced security analysis. **Private/local project** for authorized security testing and research - not publicly available due to its powerful capabilities.
 
 #### Somali Digital ID Readiness Toolkit
 Open-source toolkit for validating and simulating Somali National ID data with **privacy-preserving signed tokens**. JSON Schema validation, **Ed25519 cryptographic signing**, multilingual support (English/Somali), and **offline-first architecture** for low-connectivity environments. Accelerates digital ID adoption in Somalia.
