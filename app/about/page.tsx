@@ -117,6 +117,26 @@ export default function About() {
 										</div>
 									</div>
 
+									{/* Design & Creative Tools */}
+									<div className="mb-8">
+										<div className="flex items-center gap-2 mb-4">
+											<div className="w-1 h-6 bg-pink-500 rounded-full"></div>
+											<h3 className="text-lg font-semibold text-zinc-200">Design & Creative Tools</h3>
+										</div>
+										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+											{["Photoshop", "Illustrator", "Graphic Design", "UI/UX Design", "Visual Design", "Brand Design", "Digital Art"].map((tech) => (
+												<div
+													key={tech}
+													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
+												>
+													<span className="text-zinc-300 text-sm font-medium">
+														{tech}
+													</span>
+												</div>
+											))}
+										</div>
+									</div>
+
 									{/* Tools & Platforms */}
 									<div className="mb-8">
 										<div className="flex items-center gap-2 mb-4">
@@ -144,7 +164,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Machine Learning & AI</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Machine Learning", "XGBoost", "LSTM", "Deep Learning", "AI Integration", "Natural Language Processing", "Computer Vision", "Custom Algorithms"].map((tech) => (
+											{["Machine Learning", "XGBoost", "LSTM", "Deep Learning", "AI Integration", "Model Fine-tuning", "Natural Language Processing", "Computer Vision", "Custom Algorithms", "RunPod"].map((tech) => (
 												<div
 													key={tech}
 													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
