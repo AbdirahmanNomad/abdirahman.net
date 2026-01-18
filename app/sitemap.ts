@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { allProjects } from "contentlayer/generated";
+import { allProjects, allPosts } from "contentlayer/generated";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 
   // Dynamic project pages
@@ -45,5 +51,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...projectPages];
+  // Dynamic blog posts
+  const blogPages: MetadataRoute.Sitemap = allPosts
+    .filter((post) => post.published)
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.date ? new Date(post.date) : new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
+
+  return [...staticPages, ...projectPages, ...blogPages];
 }

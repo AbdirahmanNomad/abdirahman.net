@@ -8,6 +8,7 @@ Abdirahman Ahmed (also known as Maano) is a Somali Swedish professional with exp
 
 - [About](https://abdirahman.net/about): Professional background, skills, and expertise
 - [Projects](https://abdirahman.net/projects): Complete portfolio of 12 projects across healthcare, fintech, security, geography, travel, and cultural preservation
+- [Blog](https://abdirahman.net/blog): Project updates, tech insights, tutorials, and announcements
 - [Contact](https://abdirahman.net/contact): Email, social media links, and contact information
 
 ## Key Projects

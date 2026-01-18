@@ -29,6 +29,8 @@ education: Cybersecurity Degree
 [content-types]
 portfolio_projects: May summarise project descriptions; link to full project pages or GitHub repositories for details. Include project statistics (e.g., "51,000+ banks", "609,424+ genetic variants") only as stated on the website.
 
+blog_posts: May summarise blog posts and updates; link to full blog post pages for details. Blog content includes project updates, tech insights, tutorials, and announcements.
+
 technical_skills: May reference full-stack development expertise, API development, healthcare technology, fintech, cybersecurity, and other listed skills. Verify current skill levels and technologies used.
 
 professional_background: May reference that Abdirahman Ahmed is originally from Somalia, based in Sweden, holds a Cybersecurity degree, and has expertise in multiple domains. Include complete context about geographic background.

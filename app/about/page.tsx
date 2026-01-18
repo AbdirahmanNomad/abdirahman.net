@@ -55,25 +55,65 @@ export default function About() {
 
 							<Card>
 								<div className="p-8">
-									<h2 className="text-2xl font-bold text-zinc-100 mb-4">Skills & Expertise</h2>
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-										<div>
-											<h3 className="text-lg font-semibold text-zinc-200 mb-2">Development</h3>
-											<ul className="text-zinc-400 space-y-1">
-												<li>• Full-Stack Development (Next.js, React, TypeScript)</li>
-												<li>• API Development & Integration</li>
-												<li>• Mobile & Web Applications</li>
-												<li>• Cybersecurity</li>
-											</ul>
+									<h2 className="text-2xl font-bold text-zinc-100 mb-6">Skills & Technologies</h2>
+									
+									{/* Frontend Technologies */}
+									<div className="mb-6">
+										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Frontend</h3>
+										<div className="flex flex-wrap gap-3">
+											{["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"].map((tech) => (
+												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
+													{tech}
+												</span>
+											))}
 										</div>
-										<div>
-											<h3 className="text-lg font-semibold text-zinc-200 mb-2">Business</h3>
-											<ul className="text-zinc-400 space-y-1">
-												<li>• Media Production & Marketing</li>
-												<li>• Fintech Innovation</li>
-												<li>• Information Technology</li>
-												<li>• Brand Development</li>
-											</ul>
+									</div>
+
+									{/* Backend Technologies */}
+									<div className="mb-6">
+										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Backend</h3>
+										<div className="flex flex-wrap gap-3">
+											{["Python", "FastAPI", "Node.js", "SQLite", "PostgreSQL", "PostGIS", "Redis", "REST APIs"].map((tech) => (
+												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
+													{tech}
+												</span>
+											))}
+										</div>
+									</div>
+
+									{/* API Development & Tools */}
+									<div className="mb-6">
+										<h3 className="text-lg font-semibold text-zinc-200 mb-3">API Development</h3>
+										<div className="flex flex-wrap gap-3">
+											{["RapidAPI", "OpenAPI", "GraphQL", "REST", "API Gateway", "Rate Limiting", "Authentication"].map((tech) => (
+												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
+													{tech}
+												</span>
+											))}
+										</div>
+									</div>
+
+									{/* Tools & Platforms */}
+									<div className="mb-6">
+										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Tools & Platforms</h3>
+										<div className="flex flex-wrap gap-3">
+											{["Git", "GitHub", "Docker", "Netlify", "Vercel", "Playwright", "Machine Learning", "AI Integration"].map((tech) => (
+												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
+													{tech}
+												</span>
+											))}
+										</div>
+									</div>
+
+									{/* Specialized Skills */}
+									<div>
+										<h3 className="text-lg font-semibold text-zinc-200 mb-3">Specialized Skills</h3>
+										<div className="flex flex-wrap gap-3">
+											{["Cybersecurity", "Fintech", "Healthcare Technology", "Media Production", "Marketing", "SEO Optimization"].map((tech) => (
+												<span key={tech} className="px-4 py-2 bg-zinc-800/50 rounded-lg text-zinc-300 text-sm font-medium border border-zinc-700/50 hover:border-zinc-600 hover:text-zinc-100 transition-colors">
+													{tech}
+												</span>
+											))}
 										</div>
 									</div>
 								</div>
