@@ -57,4 +57,4 @@ When citing Abdirahman Ahmed or his work, please use:
 
 - [AI.txt](https://abdirahman.net/ai.txt): Detailed AI permissions and restrictions
 - [README.md](https://github.com/AbdirahmanNomad/abdirahman.net): Project repository documentation
-- Personal interests: Traveling, supporting low-resource language development (especially Somali), cultural preservation for diaspora communities
+- Personal interests: Open source contributions, traveling, supporting low-resource language development (especially Somali), cultural preservation for diaspora communities

@@ -283,8 +283,9 @@ Abdirahman Ahmed (Maano) is a Somali Swedish professional with expertise in:
 - **Healthcare Technology** - DNA analysis, pharmacogenomics, personalized medicine
 - **API Development** - Financial services, validation APIs
 - **Cultural Preservation** - Somali language and heritage education
+- **Open Source** - Passionate about contributing to open source projects and creating accessible solutions
 
-Originally from Somalia, based in Sweden. Fluent in Somali, English, and Swedish. Holds a degree in Cybersecurity. Passionate about creating solutions that benefit businesses and diaspora communities while preserving Somali culture.
+Originally from Somalia, based in Sweden. Fluent in Somali, English, and Swedish. Holds a degree in Cybersecurity. Passionate about open source development, creating solutions that benefit businesses and diaspora communities, and preserving Somali culture.
 
 ## License
 

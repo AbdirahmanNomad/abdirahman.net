@@ -89,7 +89,7 @@ Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Soma
 12. Somali Children's Books - Published on Amazon to help diaspora children learn Somali language and history, preserving cultural heritage.
 
 # Mission & Philosophy
-To make change and create what people can benefit from. Combining technical expertise with cultural awareness to build solutions that solve real problems for businesses and communities while preserving Somali language and heritage.
+To make change and create what people can benefit from. Combining technical expertise with cultural awareness to build solutions that solve real problems for businesses and communities while preserving Somali language and heritage. Passionate about open source development and contributing to projects that make technology more accessible to everyone.
 
 # Technologies & Skills
 

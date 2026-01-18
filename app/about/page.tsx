@@ -223,10 +223,10 @@ export default function About() {
 								<div className="p-8">
 									<h2 className="text-2xl font-bold text-zinc-100 mb-4">Personal Interests</h2>
 									<p className="text-zinc-400 leading-7 mb-4">
-										Passionate about traveling and supporting low-resource language development, particularly Somali language preservation and education for diaspora communities.
+										Passionate about open source contributions, traveling, and supporting low-resource language development, particularly Somali language preservation and education for diaspora communities.
 									</p>
 									<p className="text-zinc-400 leading-7">
-										Through work on Somali children's books and educational platforms, the goal is to preserve and pass on Somali heritage to the next generation, ensuring that diaspora children can learn their language and history.
+										Through work on Somali children's books and educational platforms, the goal is to preserve and pass on Somali heritage to the next generation, ensuring that diaspora children can learn their language and history. I believe in the power of open source to create accessible solutions that benefit communities worldwide.
 									</p>
 								</div>
 							</Card>
@@ -235,7 +235,7 @@ export default function About() {
 								<div className="p-8">
 									<h2 className="text-2xl font-bold text-zinc-100 mb-4">Mission</h2>
 									<p className="text-zinc-400 leading-7">
-										The philosophy is straightforward: to make change and create what people can benefit from. Whether building APIs that help fintech companies validate bank accounts, creating platforms that make money transfers easier for immigrants, or writing books that preserve cultural heritage - the work is driven by impact and purpose.
+										The philosophy is straightforward: to make change and create what people can benefit from. Whether building open-source APIs that help fintech companies validate bank accounts, creating platforms that make money transfers easier for immigrants, or writing books that preserve cultural heritage - the work is driven by impact and purpose. I'm passionate about open source development and contributing to projects that make technology more accessible to everyone.
 									</p>
 								</div>
 							</Card>
