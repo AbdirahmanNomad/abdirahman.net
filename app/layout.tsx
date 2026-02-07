@@ -228,12 +228,14 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://abdirahman.net" />
         <link rel="dns-prefetch" href="https://abdirahman.net" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="ai-policy" href="/ai.txt" />
         <link rel="llms-policy" href="/llms.txt" />
         <Analytics />
         <GoogleAnalytics />
-        {/* Microsoft Clarity - https://clarity.microsoft.com */}
-        <Script id="clarity" strategy="afterInteractive">
+        {/* Microsoft Clarity - load after page interactive to avoid blocking */}
+        <Script id="clarity" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -245,6 +247,7 @@ export default function RootLayout({
         <Script
           id="schema-structured-data"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
         />
       </head>
