@@ -1,23 +1,16 @@
 import { NextResponse } from "next/server";
-import { allProjects } from "contentlayer/generated";
+import { getProjects } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export async function GET() {
-  const publishedProjects = allProjects
-    .filter((p) => p.published)
-    .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    )
-    .map((project) => ({
+  const publishedProjects = getProjects().map((project) => ({
       id: project.slug,
       title: project.title,
       description: project.description,
       date: project.date,
-      url: project.url || `https://abdirahman.net/projects/${project.slug}`,
+      url: project.url ?? `https://abdirahman.net/projects/${project.slug}`,
       projectUrl: `https://abdirahman.net/projects/${project.slug}`,
       category: getCategory(project.slug),
       tags: getTags(project.slug),

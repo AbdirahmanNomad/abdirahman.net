@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
-import { allProjects } from "contentlayer/generated";
+import { getProjects } from "@/lib/content";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 		"healthcare technology",
 		"API developer Sweden",
 	],
+	alternates: { canonical: "https://abdirahman.net/projects" },
 	openGraph: {
 		title: "Projects by Abdirahman Ahmed",
 		description: "DNA Analysis System, IBAN & SWIFT Validator, TransferGalaxy, and more projects by Abdirahman Ahmed",
@@ -33,21 +34,14 @@ export const metadata: Metadata = {
 	},
 };
 export default async function ProjectsPage() {
+  const publishedProjects = getProjects();
   const viewsArray = await redis.mget(
-    ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
+    ...publishedProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
   );
   const views = viewsArray.reduce<Record<string, number>>((acc, v, i) => {
-    acc[allProjects[i].slug] = (v as number | null) ?? 0;
+    acc[publishedProjects[i].slug] = (v as number | null) ?? 0;
     return acc;
   }, {});
-
-  const publishedProjects = allProjects
-    .filter((p) => p.published)
-    .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    );
 
   // Rotate featured projects based on current date to show different ones each day
   const seed = Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)); // Changes daily

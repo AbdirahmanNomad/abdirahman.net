@@ -16,15 +16,22 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
 
   const body = await req.json();
   let slug: string | undefined = undefined;
-  let type: string = "projects"; // Default to projects for backward compatibility
-  if ("slug" in body) {
+  let type: string = "projects";
+  if ("slug" in body && typeof body.slug === "string") {
     slug = body.slug;
   }
-  if ("type" in body) {
+  if ("type" in body && typeof body.type === "string") {
     type = body.type;
   }
   if (!slug) {
     return new NextResponse("Slug not found", { status: 400 });
+  }
+  // Restrict to safe chars for Redis keys (alphanumeric, hyphen)
+  if (!/^[a-z0-9-]+$/i.test(slug) || slug.length > 120) {
+    return new NextResponse("Invalid slug", { status: 400 });
+  }
+  if (type !== "blog" && type !== "projects") {
+    return new NextResponse("Invalid type", { status: 400 });
   }
 
   // Skip Redis operations if not configured (local development)
@@ -32,7 +39,10 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
     return new NextResponse(null, { status: 202 });
   }
 
-  const ip = req.ip;
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    req.headers.get("x-real-ip") ??
+    undefined;
   if (ip) {
     // Hash the IP in order to not store it directly in your db.
     const buf = await crypto.subtle.digest(

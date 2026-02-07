@@ -1,11 +1,14 @@
 import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import { GoogleAnalytics } from "./components/google-analytics";
+import { Footer } from "./components/footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abdirahman.net"),
   title: {
     default: "Abdirahman Ahmed - Full-Stack Developer & Entrepreneur",
     template: "%s | Abdirahman Ahmed",
@@ -77,7 +80,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const calSans = LocalFont({
+const calSans = localFont({
   src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
@@ -207,13 +210,24 @@ export default function RootLayout({
     },
   };
 
-  // Combined schemas array
-  const schemas = [personSchema, websiteSchema, profilePageSchema];
+  // Organization schema (TransferGalaxy - worksFor in Person)
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "TransferGalaxy",
+    url: "https://transfergalaxy.com",
+    description: "Digital money transfer service based in Sweden.",
+  };
+
+  const schemas = [personSchema, websiteSchema, profilePageSchema, organizationSchema];
 
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
+        <link rel="preconnect" href="https://abdirahman.net" />
+        <link rel="dns-prefetch" href="https://abdirahman.net" />
         <Analytics />
+        <GoogleAnalytics />
         <Script
           id="schema-structured-data"
           type="application/ld+json"
@@ -221,10 +235,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        className={`bg-black flex flex-col min-h-screen ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-        {children}
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

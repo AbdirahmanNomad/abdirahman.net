@@ -1,9 +1,9 @@
-import type { Project } from "@/.contentlayer/generated";
+import type { ProjectMeta } from "@/lib/content";
 import Link from "next/link";
 import { Eye, View } from "lucide-react";
 
 type Props = {
-	project: Project;
+	project: ProjectMeta;
 	views: number;
 };
 

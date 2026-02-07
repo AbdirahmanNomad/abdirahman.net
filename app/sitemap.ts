@@ -1,11 +1,13 @@
 import { MetadataRoute } from "next";
-import { allProjects, allPosts } from "contentlayer/generated";
+import { getProjects, getPosts } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://abdirahman.net";
+  const allProjects = getProjects();
+  const allPosts = getPosts();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -42,9 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Dynamic project pages
-  const projectPages: MetadataRoute.Sitemap = allProjects
-    .filter((project) => project.published)
-    .map((project) => ({
+  const projectPages: MetadataRoute.Sitemap = allProjects.map((project) => ({
       url: `${baseUrl}/projects/${project.slug}`,
       lastModified: project.date ? new Date(project.date) : new Date(),
       changeFrequency: "monthly" as const,
@@ -52,9 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
   // Dynamic blog posts
-  const blogPages: MetadataRoute.Sitemap = allPosts
-    .filter((post) => post.published)
-    .map((post) => ({
+  const blogPages: MetadataRoute.Sitemap = allPosts.map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: post.date ? new Date(post.date) : new Date(),
       changeFrequency: "weekly" as const,

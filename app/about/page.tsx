@@ -6,6 +6,7 @@ export const metadata: Metadata = {
 	title: "About",
 	description: "About Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Expert in healthcare technology, fintech APIs, and cultural preservation.",
 	keywords: ["Abdirahman Ahmed", "Maano", "Somali developer", "full-stack developer", "entrepreneur", "Somalia", "Sweden"],
+	alternates: { canonical: "https://abdirahman.net/about" },
 	openGraph: {
 		title: "About Abdirahman Ahmed",
 		description: "About Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur originally from Somalia, based in Sweden.",
@@ -47,8 +48,11 @@ export default function About() {
 									<p className="text-zinc-400 leading-7 mb-4">
 										Abdirahman Ahmed has created numerous projects across different domains, from financial services APIs to healthcare technology and cultural preservation initiatives.
 									</p>
-									<p className="text-zinc-400 leading-7">
+									<p className="text-zinc-400 leading-7 mb-4">
 										The projects showcase expertise in API development, fintech innovation, healthcare technology, and cultural education. Each project is built to solve real problems and create value for users and communities.
+									</p>
+									<p className="text-zinc-400 leading-7">
+										See the full portfolio on the <a href="/projects" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">Projects</a> page and latest updates on the <a href="/blog" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">Blog</a>.
 									</p>
 								</div>
 							</Card>

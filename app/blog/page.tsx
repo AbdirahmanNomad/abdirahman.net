@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
-import { allPosts } from "contentlayer/generated";
+import { getPosts } from "@/lib/content";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Eye } from "lucide-react";
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 		"API development",
 		"healthcare technology",
 	],
+	alternates: { canonical: "https://abdirahman.net/blog" },
 	openGraph: {
 		title: "Blog & Updates by Abdirahman Ahmed",
 		description: "Project updates, tech insights, tutorials, and announcements",
@@ -30,21 +31,14 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
+  const publishedPosts = getPosts();
   const viewsArray = await redis.mget(
-    ...allPosts.map((p) => ["pageviews", "blog", p.slug].join(":")),
+    ...publishedPosts.map((p) => ["pageviews", "blog", p.slug].join(":")),
   );
   const views = viewsArray.reduce<Record<string, number>>((acc, v, i) => {
-    acc[allPosts[i].slug] = (v as number | null) ?? 0;
+    acc[publishedPosts[i].slug] = (v as number | null) ?? 0;
     return acc;
   }, {});
-
-  const publishedPosts = allPosts
-    .filter((p) => p.published)
-    .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    );
 
   return (
     <div className="relative pb-16">

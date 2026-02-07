@@ -1,33 +1,60 @@
 import { notFound } from "next/navigation";
-import { allProjects } from "contentlayer/generated";
+import { serialize } from "next-mdx-remote/serialize";
+import { getProject, getProjects } from "@/lib/content";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
+import { SocialShareButtons } from "@/app/components/social-share-buttons";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { getRedisClient } from "@/util/redis";
 import Script from "next/script";
+import Link from "next/link";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 
+const baseUrl = "https://abdirahman.net";
+
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 const redis = getRedisClient();
 
-export async function generateStaticParams(): Promise<Props["params"][]> {
-  return allProjects
-    .filter((p) => p.published)
-    .map((p) => ({
-      slug: p.slug,
-    }));
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  return getProjects().map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProject(slug);
+  if (!project) return {};
+  const title = `${project.title} | Abdirahman Ahmed`;
+  const projectUrl = `${baseUrl}/projects/${project.slug}`;
+  return {
+    title,
+    description: project.description,
+    alternates: { canonical: projectUrl },
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      url: projectUrl,
+      type: "website",
+      images: [
+        { url: `${baseUrl}/og.png`, width: 1200, height: 628, alt: project.title },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+    },
+  };
 }
 
 export default async function PostPage({ params }: Props) {
-  const slug = params?.slug;
-  const project = allProjects.find((project) => project.slug === slug);
+  const { slug } = await params;
+  const project = getProject(slug);
 
   if (!project) {
     notFound();
@@ -36,13 +63,15 @@ export default async function PostPage({ params }: Props) {
   const views = (await redis.get(["pageviews", "projects", slug].join(":"))) as number | null;
   const viewCount = views ?? 0;
 
+  const mdxSource = await serialize(project.content, { parseFrontmatter: false });
+
   // SoftwareApplication Schema for each project
   const applicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: project.title,
     description: project.description,
-    url: project.url || `https://abdirahman.net/projects/${project.slug}`,
+    url: project.url || `${baseUrl}/projects/${project.slug}`,
     applicationCategory: getApplicationCategory(project.slug),
     operatingSystem: getOperatingSystem(project.slug),
     datePublished: project.date,
@@ -67,6 +96,16 @@ export default async function PostPage({ params }: Props) {
     aggregateRating: getAggregateRating(project.slug),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${baseUrl}/projects` },
+      { "@type": "ListItem", position: 3, name: project.title, item: `${baseUrl}/projects/${project.slug}` },
+    ],
+  };
+
   return (
     <div className="bg-zinc-50 min-h-screen">
       <Script
@@ -74,12 +113,49 @@ export default async function PostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(applicationSchema) }}
       />
+      <Script
+        id="schema-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header project={project} views={viewCount} />
       <ReportView slug={project.slug} />
 
-      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-        <Mdx code={project.body.code} />
+      <div className="bg-zinc-900 px-4 py-3">
+        <div className="mx-auto max-w-4xl flex justify-center">
+          <SocialShareButtons
+            title={project.title}
+            url={`${baseUrl}/projects/${project.slug}`}
+            contentType="project"
+            itemId={project.slug}
+          />
+        </div>
+      </div>
+
+      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless max-w-4xl">
+        <Mdx source={mdxSource} />
       </article>
+
+      <nav className="px-4 pb-12 mx-auto max-w-4xl" aria-label="Related links">
+        <p className="text-sm text-zinc-500 mb-2">Explore more</p>
+        <ul className="flex flex-wrap gap-4 text-sm">
+          <li>
+            <Link href="/projects" className="text-zinc-600 hover:text-zinc-900 underline underline-offset-2">
+              All projects
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog" className="text-zinc-600 hover:text-zinc-900 underline underline-offset-2">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="text-zinc-600 hover:text-zinc-900 underline underline-offset-2">
+              About
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
