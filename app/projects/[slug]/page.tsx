@@ -98,7 +98,7 @@ export default async function PostPage({ params }: Props) {
   };
 
   return (
-    <div className="bg-zinc-50 min-h-screen">
+    <div className="min-h-screen bg-gradient-to-tl from-zinc-900 via-zinc-400/10 to-zinc-900">
       <Script
         id="schema-software-application"
         type="application/ld+json"
@@ -109,7 +109,7 @@ export default async function PostPage({ params }: Props) {
 
       <div className="px-4 pt-4 pb-2 mx-auto max-w-4xl">
         <Breadcrumb
-          variant="light"
+          variant="dark"
           items={[
             { name: "Home", href: "/" },
             { name: "Projects", href: "/projects" },
@@ -119,7 +119,7 @@ export default async function PostPage({ params }: Props) {
         />
       </div>
 
-      <div className="bg-zinc-900 px-4 py-3">
+      <div className="bg-zinc-800/50 px-4 py-3">
         <div className="mx-auto max-w-4xl flex justify-center">
           <SocialShareButtons
             title={project.title}
@@ -130,25 +130,25 @@ export default async function PostPage({ params }: Props) {
         </div>
       </div>
 
-      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless max-w-4xl">
+      <article className="px-4 py-12 mx-auto prose prose-zinc prose-invert prose-quoteless max-w-4xl">
         <Mdx source={mdxSource} />
       </article>
 
       <nav className="px-4 pb-12 mx-auto max-w-4xl" aria-label="Related links">
-        <p className="text-sm text-zinc-500 mb-2">Explore more</p>
+        <p className="text-sm text-zinc-400 mb-2">Explore more</p>
         <ul className="flex flex-wrap gap-4 text-sm">
           <li>
-            <Link href="/projects" className="text-zinc-600 hover:text-zinc-900 underline underline-offset-2">
+            <Link href="/projects" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">
               All projects
             </Link>
           </li>
           <li>
-            <Link href="/blog" className="text-zinc-600 hover:text-zinc-900 underline underline-offset-2">
+            <Link href="/blog" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-zinc-600 hover:text-zinc-900 underline underline-offset-2">
+            <Link href="/about" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">
               About
             </Link>
           </li>

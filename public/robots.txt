@@ -1,4 +1,28 @@
 User-agent: *
 Allow: /
 
+# Major search engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: YandexBot
+Allow: /
+
+# AI crawlers (see /ai.txt for detailed AI policy and /llms.txt for simplified version)
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: FacebookBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
 Sitemap: https://abdirahman.net/sitemap.xml

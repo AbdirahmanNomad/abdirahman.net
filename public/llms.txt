@@ -1,39 +1,61 @@
 # Abdirahman Ahmed (Maano) - Personal Portfolio
 
-> Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Expert in healthcare technology, fintech APIs, security testing, and cultural preservation. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy, and open-source geographic APIs.
+> Full-stack developer and entrepreneur originally from Somalia, based in Stockholm, Sweden. API & AI tools builder. Expert in healthcare technology, fintech APIs, security testing, and cultural preservation. Building APIs, agents, automation workflows, and open data systems that ship in the real world. Organizations: MotherGenome. Philosophy: "Ship beats perfect."
+
+## Identity
+
+- Name: Abdirahman Ahmed (Maano)
+- Location: Stockholm, Sweden (originally from Somalia)
+- Pronouns: he/him
+- Languages: Somali, English, Swedish
+- Education: Cybersecurity degree
+- Portfolio: https://abdirahman.net
 
 ## Core Pages
 
-- [About](https://abdirahman.net/about): Professional background, comprehensive skills showcase, and expertise
-- [Projects](https://abdirahman.net/projects): Complete portfolio of 12 projects across healthcare, fintech, security, geography, and cultural preservation
-- [Blog](https://abdirahman.net/blog): Project updates, tech insights, tutorials, and announcements
-- [Contact](https://abdirahman.net/contact): Email and social media links
+- [About](https://abdirahman.net/about): Professional background, skills showcase, expertise
+- [Projects](https://abdirahman.net/projects): Portfolio of projects across healthcare, fintech, security, geography, cultural preservation, and open source
+- [Blog](https://abdirahman.net/blog): Project updates, tech insights, tutorials, announcements
+- [Contact](https://abdirahman.net/contact): Email and social links
 
 ## Key Projects
 
-- [DNA Analysis System](https://abdirahman.net/projects/dna-analysis-system): Advanced DNA analysis platform analyzing 609,424+ genetic variants, providing 32 disease risk scores, 19 drug response profiles, ML predictions (XGBoost/Bayesian/LSTM), and comprehensive health reports
-- [IBAN & SWIFT Validator](https://abdirahman.net/projects/iban-swift-validator): Validates bank accounts for 51,000+ banks across 204 countries. Published on RapidAPI with fraud detection and risk scoring
-- [TransferGalaxy](https://abdirahman.net/projects/transfergalaxy): Digital money transfer service co-founded to help immigrants in Europe and Canada send money home affordably
-- [Somali Geography & Governance API](https://abdirahman.net/projects/somali-geo-api): First open-source geographic API for Somalia mapping 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports. Available on GitHub
-- [Warya Security Suite](https://abdirahman.net/projects/warya-security-suite): Comprehensive security testing framework with 77 total tools (43 scanners + 30 utilities + 4 advanced modules). Includes custom algorithms and AI integration
-- [FlyMind](https://abdirahman.net/projects/flymind): AI-powered flight analytics and automation suite with multi-city search, price alerts, and n8n workflow integration. Available on GitHub
+- **AfSomali Foundation** - Nonprofit preserving Somali language, culture, and heritage. Grammar checker, 70,000+ word dictionary, cultural archives, educational resources for diaspora. https://afsomali.org
+- **WebClone** - Universal website cloner on PyPI: `pip install webclone-cli`. Clone any website in seconds. GitHub & PyPI.
+- [DNA Analysis System](https://abdirahman.net/projects/dna-analysis-system): 609,424+ genetic variants, 32 disease risk scores, 19 drug response profiles, ML predictions (XGBoost/Bayesian/LSTM), health reports
+- [IBAN & SWIFT Validator](https://abdirahman.net/projects/iban-swift-validator): 51,000+ banks, 204 countries. RapidAPI. Fraud detection, bulk processing.
+- [TransferGalaxy](https://abdirahman.net/projects/transfergalaxy): Co-founded digital money transfer in Sweden. Regulated, low fees, for immigrants sending money home.
+- [Somali Geography & Governance API](https://abdirahman.net/projects/somali-geo-api): Open-source API for Somalia. 36 regions, 148 districts, 26,046+ roads, 23 airports, 8 ports. GitHub: somali-geo-api.
+- **Warya Security Suite** - Security testing framework: 77 tool categories (43 scanners + 30 utilities + 4 advanced modules), 180 scripts. Web, mobile (APK/IPA), and password security. Custom algorithms and AI integration. Built after Somalia's e-visa data breach (2025) exposed thousands of records; Somalia has little cybersecurity—Warya addresses that gap. Private; no public link.
+- [Somali Digital ID Readiness Toolkit](https://abdirahman.net/projects/somali-digital-id-toolkit): Open-source. Ed25519 signing, multilingual, offline-first. GitHub: somali-digital-id-toolkit.
+- [FlyMind](https://abdirahman.net/projects/flymind): AI flight analytics. Google Flights scraping, price alerts, n8n integration. GitHub: flymind.
+- [Email Validator API](https://abdirahman.net/projects/email-validator-api), [Somalia Phone Number API](https://abdirahman.net/projects/somalia-phone-number-api), [Nordic Phone Number API](https://abdirahman.net/projects/nordic-phone-number-api): RapidAPI validation APIs.
+- [WhatsReplay](https://abdirahman.net/projects/whatsreplay): Historical events viewer. "What happened on this day in history."
+- [Somali Children's Books](https://abdirahman.net/projects/somali-children-books): Amazon. Diaspora language and history. Folklore and education.
+
+## What I'm Doing
+
+Building open data systems; AI & automation (RAG, embeddings, agents); fintech APIs; cultural preservation; open source (PyPI, GitHub); rapid prototyping for diaspora and low-resource language communities.
 
 ## API Endpoints
 
-- [Projects JSON Feed](https://abdirahman.net/projects.json): Machine-readable JSON feed of all projects with metadata and Schema.org CollectionPage
-- [Sitemap](https://abdirahman.net/sitemap.xml): XML sitemap of all pages, projects, and blog posts
+- [Projects JSON](https://abdirahman.net/projects.json): Machine-readable project feed (Schema.org CollectionPage)
+- [Sitemap](https://abdirahman.net/sitemap.xml): All pages, projects, blog posts
 
 ## Contact
 
 - Email: hello@abdirahman.net
 - GitHub: https://github.com/AbdirahmanNomad
-- Twitter: @abdirahmaanone
+- Twitter: https://x.com/abdirahmaanone
+- Hugging Face: https://huggingface.co/AbdirahmanNomad
+- Facebook: https://www.facebook.com/abdirahmanone
+- Instagram: https://instagram.com/abdirahmanone
 
-## Citation Format
+## Citation
 
-When citing Abdirahman Ahmed or his work, use: "Abdirahman Ahmed (https://abdirahman.net)" or "Source: abdirahman.net"
+Use: "Abdirahman Ahmed (https://abdirahman.net)" or "Source: abdirahman.net"
 
-## Optional
+## Related
 
-- [AI.txt](https://abdirahman.net/ai.txt): Detailed AI permissions and restrictions
-- [README.md](https://github.com/AbdirahmanNomad/abdirahman.net): Project repository documentation
+- [ai.txt](https://abdirahman.net/ai.txt): AI permissions, restrictions, full project list
+- [GitHub profile](https://github.com/AbdirahmanNomad): Repositories, contributions, README

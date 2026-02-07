@@ -222,10 +222,12 @@ export default function RootLayout({
   const schemas = [personSchema, websiteSchema, profilePageSchema, organizationSchema];
 
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={[inter.variable, calSans.variable, "bg-black"].join(" ")}>
       <head>
         <link rel="preconnect" href="https://abdirahman.net" />
         <link rel="dns-prefetch" href="https://abdirahman.net" />
+        <link rel="ai-policy" href="/ai.txt" />
+        <link rel="llms-policy" href="/llms.txt" />
         <Analytics />
         <GoogleAnalytics />
         <Script
