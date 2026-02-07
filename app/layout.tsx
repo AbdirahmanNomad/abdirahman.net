@@ -226,6 +226,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, calSans.variable, "bg-black"].join(" ")}>
       <head>
+        {/* Google Tag Manager - as high in head as possible */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5CRFM98F');`}
+        </Script>
         <link rel="preconnect" href="https://abdirahman.net" />
         <link rel="dns-prefetch" href="https://abdirahman.net" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
@@ -233,6 +241,7 @@ export default function RootLayout({
         <link rel="ai-policy" href="/ai.txt" />
         <link rel="llms-policy" href="/llms.txt" />
         <Analytics />
+        {/* GA4: add a GA4 Configuration tag in GTM with ID G-TR5WQT5HRF; no separate gtag script needed */}
         <GoogleAnalytics />
         {/* Microsoft Clarity - load after page interactive to avoid blocking */}
         <Script id="clarity" strategy="lazyOnload">
@@ -255,6 +264,16 @@ export default function RootLayout({
         className={`bg-black flex flex-col min-h-screen ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5CRFM98F"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
