@@ -8,11 +8,10 @@
 
 Personal portfolio website showcasing projects in healthcare technology, financial services APIs, fintech, and cultural preservation.
 
-[![Next.js](https://img.shields.io/badge/Next.js-13.5-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![React](https://img.shields.io/badge/React-18.2-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Contentlayer](https://img.shields.io/badge/Contentlayer-0.3-000000?style=for-the-badge)](https://www.contentlayer.dev/)
 [![Netlify](https://img.shields.io/badge/Netlify-Ready-00C7B7?style=for-the-badge&logo=netlify)](https://netlify.com/)
 
 [🌐 Live Website](https://abdirahman.net) • [📧 Email](mailto:hello@abdirahman.net) • [💼 GitHub](https://github.com/AbdirahmanNomad) • [🐦 Twitter](https://x.com/abdirahmaanone)
@@ -80,7 +79,7 @@ First open-source geographic API for Somalia mapping **36 regions**, **148 distr
 ### Security & Digital Identity
 
 #### Warya Security Suite
-Comprehensive security testing framework with **77 total tools** (**43 scanners + 30 utilities + 4 advanced modules**). **120 powerful scripts** covering web applications, mobile apps (APK/IPA), and password security. **36 built-in scanners** plus **7 external integrations**. Includes custom algorithms and AI integration for advanced security analysis. **Private/local project** for authorized security testing and research - not publicly available due to its powerful capabilities.
+Comprehensive security testing framework with **77 tool categories** (43 scanners + 30 utilities + 4 advanced modules), **180 scripts** covering web applications, mobile apps (APK/IPA), and password security. Custom algorithms and AI integration. Built in response to Somalia’s e-visa data breach (2025). **Private/local project** for authorized security testing and research—not publicly available.
 
 #### Somali Digital ID Readiness Toolkit
 Open-source toolkit for validating and simulating Somali National ID data with **privacy-preserving signed tokens**. JSON Schema validation, **Ed25519 cryptographic signing**, multilingual support (English/Somali), and **offline-first architecture** for low-connectivity environments. Accelerates digital ID adoption in Somalia.
@@ -98,11 +97,11 @@ Published on Amazon to help diaspora children learn Somali language and history.
 ## Technologies & Skills
 
 ### Development
-- **Frontend:** Next.js 13, React 18, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3, MDX, Server Components
+- **Frontend:** Next.js 16, React 18, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3, MDX, Server Components
 - **Backend:** Python, FastAPI, Node.js, Express.js, REST APIs, SQLite, PostgreSQL, PostGIS, Redis, Upstash
 - **API Development:** RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2, API Documentation
 - **Database:** SQLite, PostgreSQL, PostGIS, Upstash Redis (optional, for analytics)
-- **Content Management:** Contentlayer, MDX (for projects and blog posts)
+- **Content:** next-mdx-remote, gray-matter, MDX (for projects and blog posts)
 - **Tools & Platforms:** Git, GitHub, Docker, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
 - **Deployment:** Netlify, Vercel
 
@@ -134,7 +133,7 @@ Published on Amazon to help diaspora children learn Somali language and history.
 
 ### Prerequisites
 
-- **Node.js** 18 or higher
+- **Node.js** 20 or higher (see `.nvmrc`)
 - **pnpm** (recommended) or npm package manager
 
 ### Installation
@@ -182,72 +181,57 @@ Or connect through the [Vercel dashboard](https://vercel.com) for automatic depl
 
 ## Features
 
-- ✨ **Modern Next.js 13** - App Router architecture for optimal performance
-- 🎨 **Beautiful UI** - Tailwind CSS with custom animations and particle effects
-- 📝 **MDX Content** - Easy content management with Contentlayer for projects and blog posts
-- 🔄 **Dynamic Projects** - Featured projects rotate daily for variety
-- 📰 **Blog & Updates** - Project updates, tech insights, tutorials, and announcements
-- 🛠️ **Skills Showcase** - Professional skills & technologies display with color-coded categories
-- 🤖 **SEO Optimized** - Complete metadata, robots.txt, ai.txt, and llms.txt for search engines and AI systems
-- 📱 **Fully Responsive** - Works perfectly on mobile, tablet, and desktop
-- ⚡ **Performance** - Optimized for fast page loads and Core Web Vitals
-- 🔒 **Security** - Security headers configured (HSTS, CSP, XSS protection)
-- 🌐 **Accessibility** - Built with accessibility best practices
+- ✨ **Next.js 16** - App Router, React Server Components
+- 🎨 **Dark UI** - Tailwind CSS with custom animations and particle effects
+- 📝 **MDX Content** - next-mdx-remote + gray-matter for projects and blog
+- 📄 **FAQ Page** - FAQ with FAQPage schema for rich results
+- 🔄 **Dynamic Projects** - Featured projects rotate daily
+- 📰 **Blog & Updates** - Project updates, tech insights, tutorials
+- 🤖 **SEO & AI** - Metadata, schema (Person, BlogPosting, SoftwareApplication, BreadcrumbList, FAQPage), robots.txt, ai.txt, llms.txt
+- 📍 **IndexNow** - `/api/indexnow` for instant Bing/indexing notification
+- 📱 **Responsive** - Mobile, tablet, desktop
+- ⚡ **Performance** - Fast loads, Core Web Vitals
+- 🔒 **Security** - HSTS, CSP, XSS protection
+- 📊 **Analytics** - Google Analytics, Microsoft Clarity, Beam (optional)
+- 🌐 **Accessibility** - Semantic HTML, ARIA, keyboard navigation
 
 ## Tech Stack
 
-- **Framework:** Next.js 13.5 with App Router
+- **Framework:** Next.js 16 with App Router
 - **Language:** TypeScript 5.2
-- **Styling:** Tailwind CSS 3.3 with custom design system
-- **Content:** Contentlayer 0.3 (MDX-based)
-- **Fonts:** Cal Sans (local), Inter (Google Fonts)
+- **Styling:** Tailwind CSS 3.3
+- **Content:** next-mdx-remote, gray-matter, MDX
+- **Fonts:** Cal Sans (local), Inter (next/font)
 - **Icons:** Lucide React
 - **Animations:** Framer Motion
-- **Analytics:** Beam Analytics (optional, privacy-focused)
+- **Analytics:** Google Analytics, Microsoft Clarity, Beam (optional)
 
 ## Project Structure
 
 ```
 abdirahman.net/
 ├── app/                      # Next.js App Router
-│   ├── about/               # About/Resume page with Skills & Technologies showcase
-│   ├── blog/                # Blog listing and post pages
-│   │   ├── [slug]/         # Dynamic blog post pages
-│   │   └── page.tsx        # Blog listing page
-│   ├── contact/             # Contact page with social links
-│   ├── projects/            # Projects listing and detail pages
-│   │   ├── [slug]/         # Dynamic project pages
-│   │   └── page.tsx        # Projects listing with rotation
-│   ├── components/          # Reusable React components
-│   │   ├── analytics.tsx   # Optional analytics
-│   │   ├── card.tsx        # Card component with hover effects
-│   │   ├── mdx.tsx         # MDX content renderer
-│   │   ├── nav.tsx         # Navigation component
-│   │   └── particles.tsx   # Particle animation background
-│   ├── layout.tsx           # Root layout with metadata
+│   ├── about/               # About page, skills & technologies
+│   ├── api/indexnow/        # IndexNow API (GET/POST) for Bing instant indexing
+│   ├── blog/                # Blog listing and [slug] post pages
+│   ├── contact/             # Contact page
+│   ├── faq/                 # FAQ page (FAQPage schema)
+│   ├── projects/            # Projects listing and [slug] detail pages
+│   ├── projects.json/       # Machine-readable project feed (CollectionPage)
+│   ├── components/          # Nav, Card, Breadcrumb, MDX, SocialShare, etc.
+│   ├── layout.tsx           # Root layout, schema, Clarity, analytics
 │   ├── page.tsx             # Homepage
-│   └── sitemap.ts           # Dynamic sitemap generation
-├── content/                  # MDX content files
-│   ├── blog/                # Blog post markdown files
-│   │   └── welcome-to-my-blog.mdx
-│   └── projects/            # Project markdown files
-│       ├── dna-analysis-system.mdx
-│       ├── iban-swift-validator.mdx
-│       ├── email-validator-api.mdx
-│       └── ... (12 total projects)
-├── public/                   # Static assets
-│   ├── ai.txt              # AI crawler information (365i spec)
-│   ├── llms.txt            # LLM-specific manifest (Markdown spec)
-│   ├── robots.txt          # Search engine instructions
-│   ├── og.png              # Open Graph image (1200x628)
-│   ├── favicon.png
-│   └── fonts/              # Custom fonts
-├── util/                     # Utility functions
-│   ├── redis.ts            # Redis client helper
-│   └── mouse.ts            # Mouse position utility
-├── netlify.toml             # Netlify deployment configuration
-├── next.config.mjs          # Next.js configuration with security headers
-└── tailwind.config.js       # Tailwind CSS configuration
+│   ├── sitemap.ts           # Dynamic sitemap
+│   └── *.txt/route.ts       # IndexNow key + llms.txt served via routes
+├── content/                  # MDX (gray-matter)
+│   ├── blog/
+│   └── projects/
+├── lib/                      # content.ts (getPosts, getProjects), mdx-components
+├── public/                   # ai.txt, llms.txt, robots.txt, og.png, fonts
+├── util/                     # redis, ga, mouse
+├── netlify.toml              # Node 20, build config
+├── next.config.mjs           # Security headers, CSP
+└── .nvmrc                    # Node 20.18.0
 ```
 
 ## SEO & AI Optimization
@@ -255,7 +239,8 @@ abdirahman.net/
 This website is optimized for both search engines and AI systems:
 
 - **Comprehensive Metadata** - Open Graph, Twitter Cards, and standard meta tags
-- **Schema.org Structured Data** - Person, WebSite, ProfilePage, BlogPosting, and SoftwareApplication schemas
+- **Schema.org** - Person, WebSite, ProfilePage, BlogPosting, SoftwareApplication, BreadcrumbList, FAQPage
+- **IndexNow** - `/api/indexnow` to notify Bing when content changes (key file at `/{key}.txt`)
 - **robots.txt** - Search engine crawler instructions
 - **ai.txt** - Structured information for AI systems following 365i AI Visibility Definition spec
 - **llms.txt** - LLM-specific manifest following Markdown specification
