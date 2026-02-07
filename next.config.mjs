@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: "standalone",
 	pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 	// Use webpack for build (Turbopack + next-mdx-remote can need this)
 	...(process.env.BUILD_WEBPACK === "1" ? { turbopack: {} } : {}),
