@@ -15,6 +15,7 @@ export default function NotFound() {
         <Link href="/blog" className="hover:text-zinc-300">Blog</Link>
         <Link href="/projects" className="hover:text-zinc-300">Projects</Link>
         <Link href="/about" className="hover:text-zinc-300">About</Link>
+        <Link href="/faq" className="hover:text-zinc-300">FAQ</Link>
         <Link href="/contact" className="hover:text-zinc-300">Contact</Link>
       </nav>
     </div>

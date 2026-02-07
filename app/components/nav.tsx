@@ -51,6 +51,13 @@ export const Navigation: React.FC = () => {
 							About
 						</Link>
 						<Link
+							href="/faq"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+							onClick={() => GA_EVENTS.navClick("/faq", "FAQ")}
+						>
+							FAQ
+						</Link>
+						<Link
 							href="/contact"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 							onClick={() => GA_EVENTS.navClick("/contact", "Contact")}
