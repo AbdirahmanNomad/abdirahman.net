@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Abdirahman Ahmed - Full-Stack Developer & Entrepreneur",
     template: "%s | Abdirahman Ahmed",
   },
-  description: "Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System (609,424+ genetic variants), IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books. Expert in healthcare technology, fintech APIs, and cultural preservation.",
+  description: "Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, and cultural preservation.",
   keywords: [
     "Abdirahman Ahmed",
     "Maano",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Abdirahman Ahmed - Full-Stack Developer, API Creator, Entrepreneur",
     description:
-      "Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
+      "Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, cultural preservation.",
     url: "https://abdirahman.net",
     siteName: "Abdirahman Ahmed",
     locale: "en-US",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Abdirahman Ahmed - Full-Stack Developer & Entrepreneur",
-    description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. DNA Analysis System, IBAN & SWIFT Validator, TransferGalaxy.",
+    description: "Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, cultural preservation.",
     creator: "@abdirahmaanone",
   },
   alternates: {
@@ -90,10 +90,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Person Schema - Enhanced with more properties
+  // Person Schema - Enhanced with more properties (for search + AI discovery)
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://abdirahman.net#person",
     name: "Abdirahman Ahmed",
     alternateName: "Maano",
     url: "https://abdirahman.net",
@@ -101,6 +102,7 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/AbdirahmanNomad",
       "https://x.com/abdirahmaanone",
+      "https://huggingface.co/AbdirahmanNomad",
       "https://www.facebook.com/abdirahmanone/",
       "https://instagram.com/abdirahmanone",
     ],
@@ -144,7 +146,7 @@ export default function RootLayout({
       addressRegion: "Sweden",
     },
     email: "hello@abdirahman.net",
-    description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
+    description: "Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, cultural preservation.",
   };
 
   // WebSite Schema
@@ -153,7 +155,7 @@ export default function RootLayout({
     "@type": "WebSite",
     name: "Abdirahman Ahmed - Portfolio",
     url: "https://abdirahman.net",
-    description: "Personal portfolio website of Abdirahman Ahmed (Maano) - Full-stack developer, API creator, and entrepreneur from Somalia, based in Sweden.",
+    description: "Abdirahman Ahmed (Maano) - Full-stack developer, API creator, entrepreneur from Somalia, based in Sweden.",
     author: {
       "@type": "Person",
       name: "Abdirahman Ahmed",
@@ -196,7 +198,7 @@ export default function RootLayout({
       url: "https://abdirahman.net",
       image: "https://abdirahman.net/og.png",
       jobTitle: "Full-Stack Developer & Entrepreneur",
-      description: "Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Creator of DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, and Somali children's books.",
+      description: "Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, cultural preservation.",
       sameAs: [
         "https://github.com/AbdirahmanNomad",
         "https://x.com/abdirahmaanone",

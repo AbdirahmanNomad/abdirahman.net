@@ -35,7 +35,7 @@ export function Breadcrumb({ items, baseUrl = BASE_URL, currentPageUrl, variant 
         "@type": "ListItem",
         position: i + 1,
         name: item.name,
-        ...(url && { item: url }),
+        ...(url && { item: { "@id": url } }),
       };
     }),
   };

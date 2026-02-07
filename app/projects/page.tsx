@@ -15,7 +15,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
 	title: "Projects",
-	description: "Projects by Abdirahman Ahmed - DNA Analysis System, IBAN & SWIFT Validator for 51,000+ banks, TransferGalaxy money transfer service, WhatsApp Replay, Somali children's books, and more. Full-stack developer and entrepreneur originally from Somalia, based in Sweden.",
+	description: "Projects by Abdirahman Ahmed - DNA Analysis System, IBAN Validator, TransferGalaxy, Somali children's books, and more. Full-stack developer from Somalia, based in Sweden.",
 	keywords: [
 		"Abdirahman Ahmed projects",
 		"DNA Analysis System",

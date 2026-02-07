@@ -66,18 +66,22 @@ export default async function PostPage({ params }: Props) {
 
   const mdxSource = await serialize(project.content, { parseFrontmatter: false });
 
-  // SoftwareApplication Schema for each project
+  const projectPageUrl = project.url || `${baseUrl}/projects/${project.slug}`;
+
+  // SoftwareApplication Schema for each project (for search + AI discovery)
   const applicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: project.title,
     description: project.description,
-    url: project.url || `${baseUrl}/projects/${project.slug}`,
+    url: projectPageUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/projects/${project.slug}` },
     applicationCategory: getApplicationCategory(project.slug),
     operatingSystem: getOperatingSystem(project.slug),
     datePublished: project.date,
     author: {
       "@type": "Person",
+      "@id": "https://abdirahman.net#person",
       name: "Abdirahman Ahmed",
       alternateName: "Maano",
       url: "https://abdirahman.net",

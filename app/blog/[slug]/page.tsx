@@ -73,16 +73,20 @@ export default async function PostPage({ params }: Props) {
 
   const mdxSource = await serialize(post.content, { parseFrontmatter: false });
 
-  // BlogPosting Schema
+  const postUrl = `${baseUrl}/blog/${post.slug}`;
+
+  // BlogPosting Schema (for search rich results + AI discovery)
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    url: postUrl,
     headline: post.title,
     description: post.description,
     datePublished: post.date,
     image: `${baseUrl}/og.png`,
     author: {
       "@type": "Person",
+      "@id": "https://abdirahman.net#person",
       name: "Abdirahman Ahmed",
       alternateName: "Maano",
       url: `${baseUrl}/about`,
@@ -94,12 +98,10 @@ export default async function PostPage({ params }: Props) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${baseUrl}/blog/${post.slug}`,
+      "@id": postUrl,
     },
     wordCount,
   };
-
-  const postUrl = `${baseUrl}/blog/${post.slug}`;
 
   return (
     <div className="bg-gradient-to-tl from-zinc-900 via-zinc-400/10 to-zinc-900 min-h-screen">
