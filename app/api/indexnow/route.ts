@@ -3,6 +3,8 @@ import { getProjects, getPosts } from "@/lib/content";
 
 const BASE_URL = "https://abdirahman.net";
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
+/** Fallback key (also served at /6278a2f6a8894a708a1509f0fda50f72.txt). Set INDEXNOW_KEY in env to override. */
+const DEFAULT_INDEXNOW_KEY = "6278a2f6a8894a708a1509f0fda50f72";
 
 /**
  * IndexNow: notify Bing (and other engines) when content changes for faster indexing.
@@ -12,26 +14,13 @@ const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
  * @see https://www.indexnow.org/documentation
  */
 export async function GET() {
-  const key = process.env.INDEXNOW_KEY;
-  if (!key) {
-    return NextResponse.json(
-      { error: "INDEXNOW_KEY not set. Add key and public/{key}.txt for IndexNow." },
-      { status: 503 }
-    );
-  }
-
+  const key = process.env.INDEXNOW_KEY || DEFAULT_INDEXNOW_KEY;
   const urls = collectAllUrls();
   return submitToIndexNow(key, urls);
 }
 
 export async function POST(request: NextRequest) {
-  const key = process.env.INDEXNOW_KEY;
-  if (!key) {
-    return NextResponse.json(
-      { error: "INDEXNOW_KEY not set. Add key and public/{key}.txt for IndexNow." },
-      { status: 503 }
-    );
-  }
+  const key = process.env.INDEXNOW_KEY || DEFAULT_INDEXNOW_KEY;
 
   let body: { urls?: string[] };
   try {
