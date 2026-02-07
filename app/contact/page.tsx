@@ -3,6 +3,7 @@ import { Github, Mail, Twitter, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
+import { Breadcrumb } from "../components/breadcrumb";
 
 const socials = [
 	{
@@ -44,6 +45,9 @@ export default function Contact() {
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto py-32">
 				<div className="w-full max-w-6xl mx-auto mt-32">
 					<div className="mb-16 text-center">
+						<div className="flex justify-center mb-4">
+							<Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Contact" }]} currentPageUrl="/contact" />
+						</div>
 						<h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-display mb-4">
 							Get in Touch
 						</h1>

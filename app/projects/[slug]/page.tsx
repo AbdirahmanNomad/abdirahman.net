@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { serialize } from "next-mdx-remote/serialize";
 import { getProject, getProjects } from "@/lib/content";
 import { Mdx } from "@/app/components/mdx";
+import { Breadcrumb } from "@/app/components/breadcrumb";
 import { Header } from "./header";
 import { SocialShareButtons } from "@/app/components/social-share-buttons";
 import "./mdx.css";
@@ -96,16 +97,6 @@ export default async function PostPage({ params }: Props) {
     aggregateRating: getAggregateRating(project.slug),
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-      { "@type": "ListItem", position: 2, name: "Projects", item: `${baseUrl}/projects` },
-      { "@type": "ListItem", position: 3, name: project.title, item: `${baseUrl}/projects/${project.slug}` },
-    ],
-  };
-
   return (
     <div className="bg-zinc-50 min-h-screen">
       <Script
@@ -113,13 +104,20 @@ export default async function PostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(applicationSchema) }}
       />
-      <Script
-        id="schema-breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <Header project={project} views={viewCount} />
       <ReportView slug={project.slug} />
+
+      <div className="px-4 pt-4 pb-2 mx-auto max-w-4xl">
+        <Breadcrumb
+          variant="light"
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Projects", href: "/projects" },
+            { name: project.title },
+          ]}
+          currentPageUrl={`/projects/${project.slug}`}
+        />
+      </div>
 
       <div className="bg-zinc-900 px-4 py-3">
         <div className="mx-auto max-w-4xl flex justify-center">

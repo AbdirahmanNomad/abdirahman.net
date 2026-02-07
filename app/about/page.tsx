@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
+import { Breadcrumb } from "../components/breadcrumb";
 
 export const metadata: Metadata = {
 	title: "About",
@@ -21,7 +22,8 @@ export default function About() {
 				<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 					<div className="mx-auto max-w-4xl mt-32 mb-32">
 						<div className="mb-16">
-							<h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-display mb-4">
+							<Breadcrumb items={[{ name: "Home", href: "/" }, { name: "About" }]} currentPageUrl="/about" />
+							<h1 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-display mb-4">
 								About Me
 							</h1>
 							<p className="text-xl text-zinc-400 mb-8">

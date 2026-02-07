@@ -10,6 +10,7 @@ import { ArrowLeft, Eye } from "lucide-react";
 import { ReportView } from "./view";
 import { ReadingProgress } from "@/app/components/reading-progress";
 import { SocialShareButtons } from "@/app/components/social-share-buttons";
+import { Breadcrumb } from "@/app/components/breadcrumb";
 import type { Metadata } from "next";
 
 export const revalidate = 60;
@@ -98,17 +99,6 @@ export default async function PostPage({ params }: Props) {
     wordCount,
   };
 
-  // BreadcrumbList Schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
-      { "@type": "ListItem", position: 3, name: post.title, item: `${baseUrl}/blog/${post.slug}` },
-    ],
-  };
-
   const postUrl = `${baseUrl}/blog/${post.slug}`;
 
   return (
@@ -119,22 +109,24 @@ export default async function PostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
-      <Script
-        id="schema-breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <Navigation />
       <ReportView slug={slug} />
       
       <div className="container mx-auto px-6 pt-24 pb-12 max-w-4xl">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-100 mb-8 duration-200"
-        >
+        <Breadcrumb
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Blog", href: "/blog" },
+            { name: post.title },
+          ]}
+          currentPageUrl={`/blog/${post.slug}`}
+        />
+        <div className="mt-4 flex items-center gap-2 text-sm text-zinc-400">
           <ArrowLeft className="w-4 h-4" />
-          Back to Blog
-        </Link>
+          <Link href="/blog" className="hover:text-zinc-100 duration-200">
+            Back to Blog
+          </Link>
+        </div>
 
         <header className="mb-12">
           <div className="flex items-center justify-between gap-4 mb-4 flex-wrap">
