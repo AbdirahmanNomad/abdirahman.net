@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://abdirahman.net/og.png",
+        url: "https://abdirahman.net/og.png?v=2",
         width: 1200,
         height: 628,
         alt: "Abdirahman Ahmed - Portfolio",
@@ -97,7 +97,7 @@ export default function RootLayout({
     name: "Abdirahman Ahmed",
     alternateName: "Maano",
     url: "https://abdirahman.net",
-    image: "https://abdirahman.net/og.png",
+    image: "https://abdirahman.net/og.png?v=2",
     sameAs: [
       "https://github.com/AbdirahmanNomad",
       "https://x.com/abdirahmaanone",
@@ -195,7 +195,7 @@ export default function RootLayout({
       name: "Abdirahman Ahmed",
       alternateName: "Maano",
       url: "https://abdirahman.net",
-      image: "https://abdirahman.net/og.png",
+      image: "https://abdirahman.net/og.png?v=2",
       jobTitle: "Full-Stack Developer & Entrepreneur",
       description: "Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, cultural preservation.",
       sameAs: [

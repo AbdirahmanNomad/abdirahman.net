@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date ?? undefined,
       images: [
-        { url: `${baseUrl}/og.png`, width: 1200, height: 628, alt: post.title },
+        { url: `${baseUrl}/og.png?v=2`, width: 1200, height: 628, alt: post.title },
       ],
     },
     twitter: {
@@ -90,7 +90,7 @@ export default async function PostPage({ params }: Props) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    image: `${baseUrl}/og.png`,
+    image: `${baseUrl}/og.png?v=2`,
     author: {
       "@type": "Person",
       "@id": "https://abdirahman.net#person",
