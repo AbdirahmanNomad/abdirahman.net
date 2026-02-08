@@ -149,7 +149,7 @@ Python, FastAPI, Node.js, Express.js, REST APIs, SQLite, PostgreSQL, PostGIS, Re
 RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2, API Documentation
 
 ## Tools & Platforms
-Git, GitHub, Docker, Coolify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
+Git, GitHub, Docker, Coolify, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
 
 ## Machine Learning & AI
 Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod, Natural Language Processing, Computer Vision, Custom Algorithms

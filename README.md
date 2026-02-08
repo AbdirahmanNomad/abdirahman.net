@@ -13,6 +13,7 @@ Personal portfolio website showcasing projects in healthcare technology, financi
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![React](https://img.shields.io/badge/React-18.2-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Coolify](https://img.shields.io/badge/Coolify-Self--hosted-0099FF?style=for-the-badge)](https://coolify.io)
+[![Netlify](https://img.shields.io/badge/Netlify-Ready-00C7B7?style=for-the-badge&logo=netlify)](https://netlify.com/)
 
 [🌐 Live Website](https://abdirahman.net) • [📧 Email](mailto:hello@abdirahman.net) • [💼 GitHub](https://github.com/AbdirahmanNomad) • [🐦 Twitter](https://x.com/abdirahmaanone)
 
@@ -102,8 +103,8 @@ Published on Amazon to help diaspora children learn Somali language and history.
 - **API Development:** RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2, API Documentation
 - **Database:** SQLite, PostgreSQL, PostGIS, Upstash Redis (optional, for analytics)
 - **Content:** next-mdx-remote, gray-matter, MDX (for projects and blog posts)
-- **Tools & Platforms:** Git, GitHub, Docker, Coolify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
-- **Deployment:** Coolify, Vercel
+- **Tools & Platforms:** Git, GitHub, Docker, Coolify, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
+- **Deployment:** Coolify, Netlify, Vercel
 
 ### Machine Learning & AI
 - Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod

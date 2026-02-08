@@ -144,7 +144,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Tools & Platforms</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Git", "GitHub", "Docker", "Coolify", "Vercel", "Playwright", "n8n", "Streamlit", "CI/CD", "Serverless"].map((tech) => (
+											{["Git", "GitHub", "Docker", "Coolify", "Netlify", "Vercel", "Playwright", "n8n", "Streamlit", "CI/CD", "Serverless"].map((tech) => (
 												<div
 													key={tech}
 													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
