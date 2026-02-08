@@ -37,9 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
   const title = pageTitle(project.title);
   const projectUrl = `${baseUrl}/projects/${project.slug}`;
+  const keywordStr = getKeywords(slug);
   return {
     title,
     description: project.description,
+    ...(keywordStr ? { keywords: keywordStr.split(/,\s*/).filter(Boolean) } : {}),
     alternates: { canonical: projectUrl },
     openGraph: {
       title: project.title,

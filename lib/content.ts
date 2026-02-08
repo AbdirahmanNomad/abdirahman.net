@@ -11,6 +11,7 @@ export type PostMeta = {
   date?: string;
   category?: string;
   published?: boolean;
+  keywords?: string[];
 };
 
 export type Post = PostMeta & {
@@ -48,6 +49,7 @@ export function getPosts(): PostMeta[] {
     const { data } = matter(raw);
     const slug = getSlug(file);
     if (data.published === false) continue;
+    const kw = data.keywords;
     posts.push({
       slug,
       title: data.title ?? slug,
@@ -55,6 +57,7 @@ export function getPosts(): PostMeta[] {
       date: data.date,
       category: data.category,
       published: data.published !== false,
+      keywords: Array.isArray(kw) ? kw : typeof kw === "string" ? [kw] : undefined,
     });
   }
   posts.sort(
@@ -71,6 +74,7 @@ export function getPost(slug: string): Post | null {
     if (!fs.existsSync(fullPath)) continue;
     const raw = fs.readFileSync(fullPath, "utf-8");
     const { data, content } = matter(raw);
+    const kw = data.keywords;
     return {
       slug,
       title: data.title ?? slug,
@@ -78,6 +82,7 @@ export function getPost(slug: string): Post | null {
       date: data.date,
       category: data.category,
       published: data.published !== false,
+      keywords: Array.isArray(kw) ? kw : typeof kw === "string" ? [kw] : undefined,
       content,
       body: { raw: content },
     };
