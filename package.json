@@ -38,6 +38,12 @@
     "tailwindcss": "^3.3.3",
     "tailwindcss-debug-screens": "^2.2.1"
   },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 111",
+    "safari >= 16.4"
+  ],
   "pnpm": {
     "overrides": {
       "react": "^18.2.0",

@@ -225,8 +225,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, calSans.variable, "bg-black"].join(" ")}>
       <head>
-        {/* Google Tag Manager - as high in head as possible */}
-        <Script id="gtm" strategy="afterInteractive">
+        {/* Google Tag Manager - deferred to avoid blocking LCP and reduce unused JS on initial load */}
+        <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
