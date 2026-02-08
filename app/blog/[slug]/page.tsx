@@ -7,7 +7,7 @@ import { getRedisClient } from "@/util/redis";
 import Script from "next/script";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { ReportView } from "./view";
+import { BlogViewCount } from "./view-count";
 import { ReadingProgress } from "@/app/components/reading-progress";
 import { SocialShareButtons } from "@/app/components/social-share-buttons";
 import { Breadcrumb } from "@/app/components/breadcrumb";
