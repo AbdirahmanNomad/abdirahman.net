@@ -12,7 +12,7 @@ Personal portfolio website showcasing projects in healthcare technology, financi
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![React](https://img.shields.io/badge/React-18.2-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Netlify](https://img.shields.io/badge/Netlify-Ready-00C7B7?style=for-the-badge&logo=netlify)](https://netlify.com/)
+[![Coolify](https://img.shields.io/badge/Coolify-Self--hosted-0099FF?style=for-the-badge)](https://coolify.io)
 
 [🌐 Live Website](https://abdirahman.net) • [📧 Email](mailto:hello@abdirahman.net) • [💼 GitHub](https://github.com/AbdirahmanNomad) • [🐦 Twitter](https://x.com/abdirahmaanone)
 
@@ -102,8 +102,8 @@ Published on Amazon to help diaspora children learn Somali language and history.
 - **API Development:** RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JWT, OAuth2, API Documentation
 - **Database:** SQLite, PostgreSQL, PostGIS, Upstash Redis (optional, for analytics)
 - **Content:** next-mdx-remote, gray-matter, MDX (for projects and blog posts)
-- **Tools & Platforms:** Git, GitHub, Docker, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
-- **Deployment:** Netlify, Vercel
+- **Tools & Platforms:** Git, GitHub, Docker, Coolify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
+- **Deployment:** Coolify, Vercel
 
 ### Machine Learning & AI
 - Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod
@@ -161,13 +161,15 @@ pnpm start
 
 ## Deployment
 
-### Netlify (Recommended)
+### Coolify (Self-hosted)
 
-The project includes `netlify.toml` with optimized settings:
+The project includes a `Dockerfile` for self-hosted deployment:
 
-1. Connect your GitHub repository to [Netlify](https://netlify.com)
-2. Netlify will auto-detect Next.js and use the configuration
-3. Deploy automatically on every push to main branch
+1. Add the app in [Coolify](https://coolify.io) with **Source** = this GitHub repo, **Build Pack** = Dockerfile
+2. Set environment variables (e.g. Upstash Redis, IndexNow) in the app
+3. Enable **Auto Deploy** and add a GitHub webhook so pushes to `main` trigger deploys automatically
+
+See `COOLIFY.md` in the repo for step-by-step setup (webhook, domain, HTTPS).
 
 ### Vercel
 
@@ -192,7 +194,7 @@ Or connect through the [Vercel dashboard](https://vercel.com) for automatic depl
 - 📱 **Responsive** - Mobile, tablet, desktop
 - ⚡ **Performance** - Fast loads, Core Web Vitals
 - 🔒 **Security** - HSTS, CSP, XSS protection
-- 📊 **Analytics** - Google Analytics, Microsoft Clarity, Beam (optional)
+- 📊 **Analytics** - Google Analytics (via GTM), Microsoft Clarity
 - 🌐 **Accessibility** - Semantic HTML, ARIA, keyboard navigation
 
 ## Tech Stack
@@ -204,7 +206,7 @@ Or connect through the [Vercel dashboard](https://vercel.com) for automatic depl
 - **Fonts:** Cal Sans (local), Inter (next/font)
 - **Icons:** Lucide React
 - **Animations:** Framer Motion
-- **Analytics:** Google Analytics, Microsoft Clarity, Beam (optional)
+- **Analytics:** Google Analytics (via GTM), Microsoft Clarity
 
 ## Project Structure
 
@@ -229,7 +231,7 @@ abdirahman.net/
 ├── lib/                      # content.ts (getPosts, getProjects), mdx-components
 ├── public/                   # ai.txt, llms.txt, robots.txt, og.png, fonts
 ├── util/                     # redis, ga, mouse
-├── netlify.toml              # Node 20, build config
+├── Dockerfile                # Coolify/self-hosted (Node 20, standalone)
 ├── next.config.mjs           # Security headers, CSP
 └── .nvmrc                    # Node 20.18.0
 ```

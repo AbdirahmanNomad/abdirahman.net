@@ -2,7 +2,6 @@ import "../global.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
 import { Footer } from "./components/footer";
 import Script from "next/script";
 
@@ -239,8 +238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="ai-policy" href="/ai.txt" />
         <link rel="llms-policy" href="/llms.txt" />
-        <Analytics />
-        {/* GA4 is loaded via GTM (Google Tag with G-TR5WQT5HRF) – do not add direct gtag script */}
+        {/* GA4 only via GTM: use Google Tag in GTM with ID G-13576961859 – no direct gtag script */}
         {/* Microsoft Clarity - load after page interactive to avoid blocking */}
         <Script id="clarity" strategy="lazyOnload">
           {`

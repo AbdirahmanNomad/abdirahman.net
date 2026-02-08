@@ -1,13 +1,11 @@
 import { Metadata } from "next";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import { Breadcrumb } from "../components/breadcrumb";
 
 export const metadata: Metadata = {
 	title: "About",
 	description: "About Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur originally from Somalia, based in Sweden. Expert in healthcare technology, fintech APIs, and cultural preservation.",
 	keywords: ["Abdirahman Ahmed", "Maano", "Somali developer", "full-stack developer", "entrepreneur", "Somalia", "Sweden"],
-	alternates: { canonical: "https://abdirahman.net/about" },
 	openGraph: {
 		title: "About Abdirahman Ahmed",
 		description: "About Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur originally from Somalia, based in Sweden.",
@@ -22,8 +20,7 @@ export default function About() {
 				<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 					<div className="mx-auto max-w-4xl mt-32 mb-32">
 						<div className="mb-16">
-							<Breadcrumb items={[{ name: "Home", href: "/" }, { name: "About" }]} currentPageUrl="/about" />
-							<h1 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-display mb-4">
+							<h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-display mb-4">
 								About Me
 							</h1>
 							<p className="text-xl text-zinc-400 mb-8">
@@ -50,11 +47,8 @@ export default function About() {
 									<p className="text-zinc-400 leading-7 mb-4">
 										Abdirahman Ahmed has created numerous projects across different domains, from financial services APIs to healthcare technology and cultural preservation initiatives.
 									</p>
-									<p className="text-zinc-400 leading-7 mb-4">
-										The projects showcase expertise in API development, fintech innovation, healthcare technology, and cultural education. Each project is built to solve real problems and create value for users and communities.
-									</p>
 									<p className="text-zinc-400 leading-7">
-										See the full portfolio on the <a href="/projects" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">Projects</a> page and latest updates on the <a href="/blog" className="text-zinc-300 hover:text-zinc-100 underline underline-offset-2">Blog</a>.
+										The projects showcase expertise in API development, fintech innovation, healthcare technology, and cultural education. Each project is built to solve real problems and create value for users and communities.
 									</p>
 								</div>
 							</Card>
@@ -150,7 +144,7 @@ export default function About() {
 											<h3 className="text-lg font-semibold text-zinc-200">Tools & Platforms</h3>
 										</div>
 										<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-											{["Git", "GitHub", "Docker", "Netlify", "Vercel", "Playwright", "n8n", "Streamlit", "CI/CD", "Serverless"].map((tech) => (
+											{["Git", "GitHub", "Docker", "Coolify", "Vercel", "Playwright", "n8n", "Streamlit", "CI/CD", "Serverless"].map((tech) => (
 												<div
 													key={tech}
 													className="px-4 py-3 bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-lg border border-zinc-700/50"
@@ -229,10 +223,10 @@ export default function About() {
 								<div className="p-8">
 									<h2 className="text-2xl font-bold text-zinc-100 mb-4">Personal Interests</h2>
 									<p className="text-zinc-400 leading-7 mb-4">
-										Passionate about open source contributions, traveling, and supporting low-resource language development, particularly Somali language preservation and education for diaspora communities.
+										Passionate about traveling and supporting low-resource language development, particularly Somali language preservation and education for diaspora communities.
 									</p>
 									<p className="text-zinc-400 leading-7">
-										Through work on Somali children's books and educational platforms, the goal is to preserve and pass on Somali heritage to the next generation, ensuring that diaspora children can learn their language and history. I believe in the power of open source to create accessible solutions that benefit communities worldwide.
+										Through work on Somali children's books and educational platforms, the goal is to preserve and pass on Somali heritage to the next generation, ensuring that diaspora children can learn their language and history.
 									</p>
 								</div>
 							</Card>
@@ -241,7 +235,7 @@ export default function About() {
 								<div className="p-8">
 									<h2 className="text-2xl font-bold text-zinc-100 mb-4">Mission</h2>
 									<p className="text-zinc-400 leading-7">
-										The philosophy is straightforward: to make change and create what people can benefit from. Whether building open-source APIs that help fintech companies validate bank accounts, creating platforms that make money transfers easier for immigrants, or writing books that preserve cultural heritage - the work is driven by impact and purpose. I'm passionate about open source development and contributing to projects that make technology more accessible to everyone.
+										The philosophy is straightforward: to make change and create what people can benefit from. Whether building APIs that help fintech companies validate bank accounts, creating platforms that make money transfers easier for immigrants, or writing books that preserve cultural heritage - the work is driven by impact and purpose.
 									</p>
 								</div>
 							</Card>
