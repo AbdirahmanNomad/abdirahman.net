@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
-import { GoogleAnalytics } from "./components/google-analytics";
 import { Footer } from "./components/footer";
 import Script from "next/script";
 
@@ -241,8 +240,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="ai-policy" href="/ai.txt" />
         <link rel="llms-policy" href="/llms.txt" />
         <Analytics />
-        {/* GA4: add a GA4 Configuration tag in GTM with ID G-TR5WQT5HRF; no separate gtag script needed */}
-        <GoogleAnalytics />
+        {/* GA4 is loaded via GTM (Google Tag with G-TR5WQT5HRF) – do not add direct gtag script */}
         {/* Microsoft Clarity - load after page interactive to avoid blocking */}
         <Script id="clarity" strategy="lazyOnload">
           {`
