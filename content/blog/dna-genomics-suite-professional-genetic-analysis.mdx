@@ -1,0 +1,120 @@
+---
+title: "How I Built a Professional DNA Genomics Suite: 609K Variants, 32 Disease Risks, and ML-Powered Health Forecasts"
+description: "Inside the DNA analysis platform I built: polygenic risk scores, pharmacogenomics, lab integration with XGBoost and LSTM, and why privacy-first genomics matters."
+date: "2026-02-09"
+category: "Project"
+published: true
+keywords:
+  - DNA analysis system
+  - pharmacogenomics
+  - polygenic risk score
+  - genetic testing software
+  - DNA genomics suite
+  - personalized health ML
+  - lab results integration
+---
+
+I didn’t set out to build a DNA analysis platform that handles over 600,000 genetic variants. I set out to answer a simpler question: *what does my DNA actually mean for my health—and how can that stay private and under my control?*
+
+The result is a **professional DNA genomics suite** that runs entirely on your machine: 32 disease risk scores, 19 drug response profiles, lab integration with machine learning, and 50–100 page PDF reports—without sending your data to the cloud. Here’s how it started and why I built it this way.
+
+## A Privacy-First DNA Analysis Platform Built Locally
+
+## How It Started: My Raw DNA and a 2025 Idea
+
+In **2018** I got my **raw DNA** from a consumer test—I just wanted to know my DNA. The file sat there for years. Then one night in **2025** I had the idea: *I have raw DNA. What more can I actually learn from it?*
+
+I started researching. I read papers, dug into how **polygenic risk scores** work, how **pharmacogenomics** links genes to drug response, and how labs and genetics fit together. I didn’t have a genomics degree—I learned by building. At the same time, I’d been collecting my own **blood and lab results** from different countries over the years. I had CSV files from Sweden, from travels, from check-ups. So I combined everything: my raw DNA, my lab history from multiple countries, and the research I’d done—and I built this system. I validated it against my own data and made sure the outputs made sense. In my own use and when I’ve shared reports with **doctors**, the results have been informative and useful as a basis for discussion. I’ve **contacted doctors and shown them** the system and sample reports so they could see how it works and how patients might use it as a starting point for conversation—never as a replacement for clinical care.
+
+So the suite isn’t theoretical. It came from my own DNA, my own labs, and a lot of nights learning how DNA actually works.
+
+## Why Build a DNA Analysis System?
+
+Most consumer genetic services do two things: they sequence (or ingest) your data, and they send it to their servers. You get back a fixed report, and you rarely see the underlying variants or how they’re weighted. If you want to re-run analysis with new research, or combine your DNA with your own lab results, you’re usually out of luck.
+
+I wanted something different: **a single place where raw DNA data meets clinical-grade risk logic and your own lab history**, with everything running locally so your genome never leaves your device.
+
+So I built a **DNA genomics suite** that:
+
+- Analyzes **609,424+ genetic variants** across all 23 chromosomes
+- Computes **32 polygenic risk scores** for major diseases (cardiovascular, cancer, neurological, metabolic, autoimmune, and more)
+- Delivers **19 pharmacogenomics profiles** aligned with FDA and CPIC guidelines
+- Covers **15+ nutrient metabolism** pathways for personalized nutrition
+- Integrates **ancestry and haplogroups** and **athletic performance** genetics
+- Accepts **uploaded lab results** (CSV) and runs **ML-based predictions** and 90-day forecasts
+- Outputs **comprehensive PDF reports** (50–100 pages) and CSV/JSON for your own use or for your doctor
+
+All of that runs in a **privacy-first, local-first** architecture: no data is sent to my servers or anyone else’s.
+
+## Core Analysis: What the System Actually Does
+
+### Polygenic Risk Scores (32 Diseases)
+
+Single-gene conditions get a lot of attention, but most common diseases—heart disease, type 2 diabetes, many cancers, depression—are **polygenic**. Dozens or hundreds of variants each contribute a small amount. The system uses established research to weight those variants and produce **polygenic risk scores (PRS)** for 32 conditions, including:
+
+- **Cardiovascular:** coronary artery disease, stroke, atrial fibrillation, hypertension  
+- **Cancer:** breast, prostate, colorectal, lung  
+- **Neurological:** Alzheimer’s, Parkinson’s, depression, bipolar, schizophrenia, migraine  
+- **Metabolic:** type 2 diabetes, obesity, thyroid, gout  
+- **Autoimmune:** rheumatoid arthritis, Crohn’s, celiac, MS, psoriasis  
+- **Other:** kidney disease, liver disease, osteoporosis, asthma, glaucoma, macular degeneration, endometriosis, PCOS  
+
+These aren’t diagnoses. They’re **risk estimates** that can inform conversations with your doctor and lifestyle or screening choices.
+
+### Pharmacogenomics: 19 Drug Response Profiles
+
+Your genes affect how you metabolize many drugs. The suite includes **19 drug response profiles** based on pharmacogenomics guidelines (e.g. FDA and CPIC): which enzymes you have, whether you’re a fast or slow metabolizer, and what that can mean for dosing or drug choice. Again, the output is for discussion with a clinician, not a replacement for medical advice.
+
+### Lab Results + Machine Learning
+
+Raw DNA is only part of the picture. I’d collected my own **blood and lab tests from different countries** over the years. I wanted one place to combine that with my genetics—so I added **lab results integration** to the suite. You can upload CSV lab data (date, test name, value, unit). The system then:
+
+- Correlates **genetic findings with lab values** (e.g. why a marker might be high or low)
+- Runs **ML models** (XGBoost, Bayesian ridge, LSTM) for trend and prediction
+- Produces **90-day-style forecasts** with confidence intervals
+- Combines **DNA-based risk** with **current lab status** for a fuller picture
+
+These forecasts are statistical trend estimates, not clinical predictions.
+
+All processing stays on your machine. No HIPAA-in-the-cloud concern—the design is **local-first and HIPAA-conscious** so that in the right deployment context it can align with strict health-data handling.
+
+## Architecture: How It’s Built
+
+The app is **Streamlit-based** for the UI, with a clear separation between data, models, and reporting:
+
+- **Core engine** – variant parsing, risk scoring, pharmacogenomics logic
+- **Lab integration** – CSV ingestion, normalization, correlation with genetic results
+- **Advanced ML** – XGBoost, Bayesian, LSTM ensemble for predictions and forecasting
+- **PDF generator** – 50–100 page reports with tables, charts, and plain-language summaries
+
+There are **42 analysis tabs** in the UI: dashboard, quality control, variants, pharmacogenomics, nutrigenomics, fitness, health risks, ancestry, cognitive, lab results, ML predictions, and export. An **API mode** (FastAPI) exposes 13 endpoints for integration with other tools or workflows.
+
+Supported **DNA file formats** include 23andMe, AncestryDNA, and MyHeritage (TXT, CSV, ZIP). So if you already have a file from one of those services, you can run it through the suite without sending it to another company’s servers.
+
+## Why Privacy and Local Processing Matter
+
+Genetic data is uniquely sensitive. I didn’t want the system to depend on sending genomes to the cloud. So:
+
+- **100% local processing** – your DNA file and lab CSVs stay on your computer
+- **No telemetry or upload of genetic data** – the app doesn’t phone home with your variants
+- **You own the outputs** – PDF and CSV/JSON exports are yours to keep or share only with whom you choose
+
+That’s the **privacy-first** part. The **professional** part is the depth of the analysis: 609K+ variants, 32 PRS, 19 drug profiles, and ML that ties genetics to lab trends and simple forecasts.
+
+## Who It’s For
+
+The suite is built for **personal and research use**: curious users who want to go deeper than a standard consumer report, students or researchers exploring genomics and ML, or developers who want to see how polygenic risk and pharmacogenomics can be implemented in a single, local pipeline. It’s not a medical device and doesn’t replace a doctor or a clinical test—it’s a **tool for insight and education**.
+
+## What I’d Do Next
+
+If I were to extend it further, I’d focus on: more diseases and drug pathways as the literature evolves, better UX for non-technical users, and optional **anonymized contribution** to research (only if the user explicitly opts in). The codebase is structured so that new risk models and drug profiles can be added as the science updates.
+
+I’m originally from Somalia, and I’d like to **help developing countries like my home country**. Somalia is building out digital health and identity systems. I’d like to contribute—whether that’s sharing what I’ve learned about privacy-first genomics, supporting local health initiatives, or helping make this kind of insight available where it’s needed. Building this suite showed me how much is possible when you combine genetics, lab data, and ML in a way that keeps data local and under the user’s control. I want that to benefit not just me, but the places and people I care about.
+
+---
+
+If you want to see the project in context with my other work—APIs, fintech, healthcare tech—it’s on my [Projects](/projects) page as the **DNA Analysis System**. The full technical details, architecture, and quick start are in the project write-up and the repo.
+
+---
+
+**Disclaimer:** This article describes a personal project for education and research. It is not medical advice. The system is not a medical device and does not replace clinical testing or a doctor’s judgment. I have shared reports with doctors for discussion only. Genetic and lab-based insights should always be discussed with a qualified healthcare provider before making any health decisions.
