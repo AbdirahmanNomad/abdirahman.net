@@ -31,7 +31,8 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={50}
       />
-      <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+      {/* LCP-friendly: no opacity:0 / animation so Lighthouse can detect a real hero element */}
+      <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
         Abdirahman
       </h1>
 
