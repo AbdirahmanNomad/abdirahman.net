@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getRedisClient } from "@/util/redis";
 
-const redis = getRedisClient();
-
 export default async function incr(req: NextRequest): Promise<NextResponse> {
+  const redis = getRedisClient();
   if (req.method !== "POST") {
     return new NextResponse("use POST", { status: 405 });
   }

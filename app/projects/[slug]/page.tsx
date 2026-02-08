@@ -20,17 +20,22 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-const redis = getRedisClient();
-
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getProjects().map((p) => ({ slug: p.slug }));
+}
+
+const MAX_TITLE_LENGTH = 70;
+function pageTitle(name: string): string {
+  const suffix = " | Abdirahman Ahmed";
+  const full = `${name}${suffix}`;
+  return full.length <= MAX_TITLE_LENGTH ? full : `${name.slice(0, MAX_TITLE_LENGTH - suffix.length - 1)}…${suffix}`;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  const title = `${project.title} | Abdirahman Ahmed`;
+  const title = pageTitle(project.title);
   const projectUrl = `${baseUrl}/projects/${project.slug}`;
   return {
     title,
@@ -61,6 +66,7 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 
+  const redis = getRedisClient();
   const views = (await redis.get(["pageviews", "projects", slug].join(":"))) as number | null;
   const viewCount = views ?? 0;
 
