@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   creator: "Abdirahman Ahmed",
   publisher: "Abdirahman Ahmed",
   openGraph: {
-    title: "Abdirahman Ahmed - Full-Stack Developer, API Creator, Entrepreneur",
+    title: "Abdirahman Ahmed - Full-Stack Developer & Entrepreneur",
     description:
       "Abdirahman Ahmed (Maano) - Full-stack developer and entrepreneur from Somalia, based in Sweden. DNA Analysis System, IBAN Validator, TransferGalaxy, fintech APIs, cultural preservation.",
     url: "https://abdirahman.net",
