@@ -114,8 +114,7 @@ export default async function PostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(applicationSchema) }}
       />
-      <Header project={project} views={viewCount} />
-      <ReportView slug={project.slug} />
+      <Header project={project} views={viewCount} slug={project.slug} type="projects" />
 
       <div className="px-4 pt-4 pb-2 mx-auto max-w-4xl">
         <Breadcrumb

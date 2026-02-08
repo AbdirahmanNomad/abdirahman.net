@@ -12,10 +12,32 @@ type Props = {
 	};
 
 	views: number;
+	/** When set, report view on mount and update displayed count from API response */
+	slug?: string;
+	type?: "projects" | "blog";
 };
-export const Header: React.FC<Props> = ({ project, views }) => {
+export const Header: React.FC<Props> = ({ project, views: initialViews, slug, type: viewType }) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+	const [views, setViews] = useState(initialViews);
+
+	// Report view and update count when API returns new value
+	useEffect(() => {
+		setViews(initialViews);
+	}, [initialViews]);
+	useEffect(() => {
+		if (!slug || !viewType) return;
+		fetch("/api/incr", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ slug, type: viewType }),
+		})
+			.then((r) => r.json())
+			.then((res: { incremented?: boolean; count?: number }) => {
+				if (res.incremented && typeof res.count === "number") setViews(res.count);
+			})
+			.catch(() => {});
+	}, [slug, viewType]);
 
 	const links: { label: string; href: string }[] = [];
 	if (project.repository) {

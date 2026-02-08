@@ -59,6 +59,6 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
       return NextResponse.json({ incremented: false, reason: "deduplicated_same_ip_24h" }, { status: 202 });
     }
   }
-  await redis.incr(["pageviews", type, slug].join(":"));
-  return NextResponse.json({ incremented: true }, { status: 202 });
+  const count = await redis.incr(["pageviews", type, slug].join(":"));
+  return NextResponse.json({ incremented: true, count }, { status: 202 });
 }

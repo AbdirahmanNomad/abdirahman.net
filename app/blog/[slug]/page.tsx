@@ -6,7 +6,7 @@ import { Navigation } from "@/app/components/nav";
 import { getRedisClient } from "@/util/redis";
 import Script from "next/script";
 import Link from "next/link";
-import { ArrowLeft, Eye } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { ReportView } from "./view";
 import { ReadingProgress } from "@/app/components/reading-progress";
 import { SocialShareButtons } from "@/app/components/social-share-buttons";
@@ -118,8 +118,6 @@ export default async function PostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
       <Navigation />
-      <ReportView slug={slug} />
-      
       <div className="container mx-auto px-6 pt-24 pb-12 max-w-4xl">
         <Breadcrumb
           items={[
@@ -151,10 +149,7 @@ export default async function PostPage({ params }: Props) {
               <span aria-hidden="true">·</span>
               <span>{readTimeMinutes} min read</span>
             </div>
-            <span className="flex items-center gap-1 text-sm text-zinc-500">
-              <Eye className="w-4 h-4" />{" "}
-              {Intl.NumberFormat("en-US", { notation: "compact" }).format(viewCount)}
-            </span>
+            <BlogViewCount initialCount={viewCount} slug={slug} />
           </div>
           
           <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl font-display mb-4">
