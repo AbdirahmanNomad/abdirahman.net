@@ -3,8 +3,8 @@ import { getProjects, getPosts } from "@/lib/content";
 
 const BASE_URL = "https://abdirahman.net";
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
-/** Fallback key (also served at /6278a2f6a8894a708a1509f0fda50f72.txt). Set INDEXNOW_KEY in env to override. */
-const DEFAULT_INDEXNOW_KEY = "6278a2f6a8894a708a1509f0fda50f72";
+/** IndexNow key (served at /{key}.txt). Set INDEXNOW_KEY in env to override. */
+const DEFAULT_INDEXNOW_KEY = "3a64fda5e8fe428696b7a954659303ee";
 
 /**
  * IndexNow: notify Bing (and other engines) when content changes for faster indexing.
