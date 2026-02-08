@@ -2,9 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { getRedisClient } from "@/util/redis";
 
 const redis = getRedisClient();
-export const config = {
-  runtime: "edge",
-};
 
 export default async function incr(req: NextRequest): Promise<NextResponse> {
   if (req.method !== "POST") {

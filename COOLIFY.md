@@ -24,6 +24,13 @@ In Coolify → your application → **Environment Variables**, add what you had 
 
 The app works without Redis; the view-count API will skip counting if Redis env vars are missing.
 
+**If Redis (view counts) doesn’t work:**
+
+1. **Use runtime env, not build** — Do **not** check “Build Variable” for `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN`. They must be available when the app runs, not during Docker build.
+2. **Exact names** — Use exactly `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` (no typos, no spaces).
+3. **Redeploy or restart** — After adding or changing env vars, **Redeploy** the app (or **Restart** the container) so the new env is loaded.
+4. **Verify** — Open `https://your-domain/api/redis-check`. You should see `{"redis":"configured","hasUrl":true,"hasToken":true}`. If you see `"not_configured"`, the container doesn’t have the vars; fix the names and redeploy.
+
 ## 3. Domain and HTTPS
 
 - In Coolify, set **Domain** to your domain (e.g. `abdirahman.net`).
@@ -35,7 +42,29 @@ The app works without Redis; the view-count API will skip counting if Redis env 
 - Click **Deploy**. Coolify will build the image from the Dockerfile and run the container.
 - **Redeploy** when you push to `main` (if auto-deploy is enabled) or trigger a new deploy manually.
 
-## 5. After moving from Netlify
+## 5. Auto-deploy on git push (webhook)
+
+So Coolify deploys automatically when you push to GitHub:
+
+**In Coolify**
+
+1. Open your application → **Advanced** (or **Settings**).
+2. Turn on **Auto Deploy** (or **Deploy on push**).
+3. Set a **Webhook secret** (e.g. a random string from a password generator) and save.
+4. Copy the **Webhook URL** Coolify shows (e.g. `https://your-coolify.server/api/webhooks/...`).
+
+**In GitHub**
+
+1. Repo **AbdirahmanNomad/abdirahman.net** → **Settings** → **Webhooks** → **Add webhook**.
+2. **Payload URL:** paste the Coolify webhook URL.
+3. **Content type:** `application/json`.
+4. **Secret:** the same webhook secret you set in Coolify.
+5. **Which events:** choose **Just the push event** (or “Let me select” → **Pushes**).
+6. Leave **Active** checked → **Add webhook**.
+
+After this, every push to the branch Coolify watches (e.g. `main`) will trigger a new deploy. No need to click Deploy manually.
+
+## 6. After moving from Netlify
 
 - Update DNS so the domain points to your Coolify server instead of Netlify.
 - Optionally remove or pause the Netlify site so traffic goes only to Coolify.
