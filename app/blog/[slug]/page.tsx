@@ -13,7 +13,7 @@ import { SocialShareButtons } from "@/app/components/social-share-buttons";
 import { Breadcrumb } from "@/app/components/breadcrumb";
 import type { Metadata } from "next";
 
-export const revalidate = 60;
+export const revalidate = 15;
 
 const baseUrl = "https://abdirahman.net";
 

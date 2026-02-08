@@ -12,7 +12,7 @@ import Script from "next/script";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const revalidate = 60;
+export const revalidate = 15;
 
 const baseUrl = "https://abdirahman.net";
 

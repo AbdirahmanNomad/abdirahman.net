@@ -33,7 +33,7 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
 
   // Skip Redis operations if not configured (local development)
   if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
-    return new NextResponse(null, { status: 202 });
+    return NextResponse.json({ incremented: false, reason: "redis_not_configured" }, { status: 202 });
   }
 
   const ip =
@@ -57,9 +57,9 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
       ex: 24 * 60 * 60,
     });
     if (!isNew) {
-      return new NextResponse(null, { status: 202 });
+      return NextResponse.json({ incremented: false, reason: "deduplicated_same_ip_24h" }, { status: 202 });
     }
   }
   await redis.incr(["pageviews", type, slug].join(":"));
-  return new NextResponse(null, { status: 202 });
+  return NextResponse.json({ incremented: true }, { status: 202 });
 }
