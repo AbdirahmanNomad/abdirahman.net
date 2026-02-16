@@ -129,10 +129,14 @@ Abdirahman Ahmed is a full-stack developer and entrepreneur originally from Soma
 ## Cultural Preservation
 14. Somali Children's Books - Published on Amazon for diaspora children to learn Somali language and history. Traditional stories, folklore, and educational content (e.g. "Dhegdheer - Cannibal of the Desert with Long Ears").
 
+## Education & Speech
+15. Iqra AI - Open-source Quran speech recognition (ASR) with Tarteel-style mistake detection, Iqra/memorization mode, and multilingual translations. Arabic (Tanzil), English (Rwwad), Somali, Amharic, Swahili via Quran Enc. Whisper-based (whisper-base-ar-quran), Gradio web app, hijaiyah letter practice, CLI export (TXT, JSON, SRT). Offered as sadaqa jariyah. GitHub: AbdirahmanNomad/IqraAI.
+
 ## Media & Music
-15. Gobfilms - Somalia's first record label to achieve YouTube verification. YouTube music channel. Abdirahman Maano is well known in Somali music and media—a mogul who helped many young artists from his teenage years onward. Has worked with Awale Adan, Najiib Alfa, Gulled Simba, Xidigaha Geeska (the Horn Stars band), DJ Subeer, and other major Somali artists.
+16. Gobfilms - Somalia's first record label to achieve YouTube verification. YouTube music channel. Abdirahman Maano is well known in Somali music and media—a mogul who helped many young artists from his teenage years onward. Has worked with Awale Adan, Najiib Alfa, Gulled Simba, Xidigaha Geeska (the Horn Stars band), DJ Subeer, and other major Somali artists.
 
 # Random Facts
+- Iqra AI: Quran ASR with Somali, Amharic, Swahili translations — open source, sadaqa jariyah
 - 600k+ YouTube subscribers (for fun)
 - Powered by Stockholm coffee culture
 - Building tools that solve real problems for diaspora communities
@@ -152,7 +156,7 @@ RapidAPI, OpenAPI, GraphQL, REST, API Gateway, Rate Limiting, Authentication, JW
 Git, GitHub, Docker, Coolify, Netlify, Vercel, Playwright, n8n, Streamlit, CI/CD, Serverless
 
 ## Machine Learning & AI
-Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod, Natural Language Processing, Computer Vision, Custom Algorithms
+Machine Learning, XGBoost, LSTM, Deep Learning, AI Integration, Model Fine-tuning, RunPod, Natural Language Processing, Computer Vision, Custom Algorithms, Speech Recognition (ASR), Whisper, Quran ASR
 
 ## Design & Creative Tools
 Photoshop, Illustrator, Graphic Design, UI/UX Design, Visual Design, Brand Design, Digital Art

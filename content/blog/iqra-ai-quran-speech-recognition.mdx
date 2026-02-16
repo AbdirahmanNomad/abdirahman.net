@@ -1,0 +1,63 @@
+---
+title: "Iqra AI: Quran Speech Recognition with Multilingual Translations"
+description: "Open-source Quran ASR with Tarteel-style mistake detection, Iqra mode, and translations in Arabic, English, Somali, Amharic, and Swahili. Built with Whisper and offered as sadaqa jariyah."
+date: "2026-02-16"
+category: "Project"
+published: true
+keywords:
+  - Iqra AI
+  - Quran speech recognition
+  - ASR
+  - Tarteel
+  - Whisper
+  - Quran memorization
+  - Somali translation
+  - Quran Enc
+---
+
+I’ve open-sourced **Iqra AI**—a Quran speech recognition system with verse matching, mistake detection, and multilingual translations. It’s on [GitHub](https://github.com/AbdirahmanNomad/IqraAI) and offered as **sadaqa jariyah**.
+
+## What It Does
+
+- **ASR** — Uses the Tarteel **whisper-base-ar-quran** model (fine-tuned for Quranic Arabic) to transcribe recitation.
+- **Verse matching & mistake detection** — Compares your recitation to the canonical text. Green = correct, red = missed or incorrect, yellow = extra words.
+- **Iqra mode** — Pick Surah and Ayah, see the verse (RTL), record, and get instant feedback with mistakes highlighted.
+- **Translations** — Arabic (Tanzil), English (Rwwad), **Somali**, **Amharic**, and **Swahili** via the Quran Enc API.
+- **Letter practice** — Hijaiyah letter classification so learners can practice individual letters and get top-3 predictions.
+- **Export** — TXT, JSON, SRT via CLI for use in other apps or workflows.
+
+## Build With Iqra AI
+
+You can use the modules to build your own apps:
+
+| Build | Use |
+|-------|-----|
+| Quran memorization app | Import `asr_engine`, `matcher`, `quran_data` → transcribe, match verses, show mistakes. |
+| Mobile / web backend | Run `app.py` or wrap `transcribe()` + `match_and_analyze()` in your API. |
+| Letter learning app | Use the hijaiyah classifier from `app.py` for kids and learners. |
+
+## Quick Start
+
+```bash
+git clone https://github.com/AbdirahmanNomad/IqraAI.git
+cd IqraAI
+python3 -m venv venv
+source venv/bin/activate   # Mac/Linux; on Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
+
+Open http://127.0.0.1:7860 in your browser. First run downloads ~500MB of models (Arabic XML + ASR); translations need internet.
+
+**CLI:** `python transcribe.py path/to/audio.wav --match --export json`
+
+## Tech & Data
+
+- **Tanzil** (ceefour/qurandatabase) — Arabic Quran text (CC-BY-ND-3.0).
+- **Quran Enc API** — English (Rwwad), Somali, Amharic, Swahili.
+- **Tarteel** — whisper-base-ar-quran ASR model.
+- **Gradio** — Web UI; **Hugging Face** — Transformers and model hosting.
+
+## Why Open Source
+
+I wanted this kind of feedback—accurate, verse-level, with translations in languages like Somali and Amharic—to be available to anyone building learning tools or research. By open-sourcing it, others can integrate the same pipeline into apps, backends, or curricula. Author: **Abdirahman Ahmed** · [abdirahman.net](https://abdirahman.net) · [GitHub: IqraAI](https://github.com/AbdirahmanNomad/IqraAI).

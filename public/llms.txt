@@ -32,6 +32,7 @@
 - [Email Validator API](https://abdirahman.net/projects/email-validator-api), [Somalia Phone Number API](https://abdirahman.net/projects/somalia-phone-number-api), [Nordic Phone Number API](https://abdirahman.net/projects/nordic-phone-number-api): RapidAPI validation APIs.
 - [WhatsReplay](https://abdirahman.net/projects/whatsreplay): Historical events viewer. "What happened on this day in history."
 - [Somali Children's Books](https://abdirahman.net/projects/somali-children-books): Amazon. Diaspora language and history. Folklore and education.
+- [Iqra AI](https://abdirahman.net/projects/iqra-ai): Quran speech recognition (ASR) with Tarteel-style mistake detection, Iqra mode, and translations in Arabic, English, Somali, Amharic, Swahili. Whisper (whisper-base-ar-quran), Gradio, Quran Enc. Open source, sadaqa jariyah. GitHub: AbdirahmanNomad/IqraAI.
 - **Gobfilms** - Somalia's first YouTube-verified record label; YouTube music channel. Abdirahman Maano is well known in Somali music and media—a mogul who helped many young artists from his teenage years; worked with Awale Adan, Najiib Alfa, Gulled Simba, Xidigaha Geeska (the Horn Stars band), DJ Subeer, and major Somali artists.
 
 ## What I'm Doing

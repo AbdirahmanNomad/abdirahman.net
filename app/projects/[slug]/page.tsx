@@ -183,12 +183,13 @@ function getApplicationCategory(slug: string): string {
     "flymind": "WebApplication",
     "somali-digital-id-toolkit": "BusinessApplication",
     "somali-children-books": "EducationalApplication",
+    "iqra-ai": "EducationalApplication",
   };
   return categoryMap[slug] || "WebApplication";
 }
 
 function getOperatingSystem(slug: string): string {
-  if (slug.includes("api") || slug === "flymind" || slug === "somali-geo-api" || slug === "warya-security-suite" || slug === "somali-digital-id-toolkit") {
+  if (slug.includes("api") || slug === "flymind" || slug === "somali-geo-api" || slug === "warya-security-suite" || slug === "somali-digital-id-toolkit" || slug === "iqra-ai") {
     return "Web, API";
   }
   return "Web";
@@ -208,6 +209,7 @@ function getKeywords(slug: string): string {
     "flymind": "Flight search, AI, travel, automation, GitHub",
     "somali-digital-id-toolkit": "Digital identity, ID validation, security, open-source, GitHub",
     "somali-children-books": "Education, cultural preservation, books, Amazon",
+    "iqra-ai": "Quran, speech recognition, ASR, Tarteel, Whisper, memorization, Somali, Amharic, Swahili, open source, GitHub",
   };
   return keywordsMap[slug] || "";
 }

@@ -74,6 +74,7 @@ function getCategory(slug: string): string {
     "flymind": "WebApplication",
     "somali-digital-id-toolkit": "BusinessApplication",
     "somali-children-books": "EducationalApplication",
+    "iqra-ai": "EducationalApplication",
   };
   return categoryMap[slug] || "WebApplication";
 }
@@ -92,6 +93,7 @@ function getTags(slug: string): string[] {
     "flymind": ["travel", "ai", "automation", "flight-search", "github"],
     "somali-digital-id-toolkit": ["identity", "security", "open-source", "somalia", "github"],
     "somali-children-books": ["education", "cultural-preservation", "books", "amazon"],
+    "iqra-ai": ["quran", "speech-recognition", "asr", "tarteel", "whisper", "memorization", "somali", "amharic", "swahili", "open-source", "github"],
   };
   return tagsMap[slug] || [];
 }
@@ -110,6 +112,7 @@ function getTechnologies(slug: string): string[] {
     "flymind": ["FastAPI", "Streamlit", "Playwright", "Python", "n8n"],
     "somali-digital-id-toolkit": ["FastAPI", "Python", "Ed25519", "SQLite"],
     "somali-children-books": ["Publishing", "Amazon"],
+    "iqra-ai": ["Python", "Gradio", "Whisper", "Hugging Face", "Quran Enc", "Tanzil"],
   };
   return techMap[slug] || [];
 }

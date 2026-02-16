@@ -1,0 +1,18 @@
+---
+title: Iqra AI - Quran Speech Recognition & Memorization
+description: World-class Quran speech recognition with Tarteel-style mistake detection, Iqra/memorization mode, and multilingual translations (Arabic, English, Somali, Amharic, Swahili). Built with Whisper and Gradio.
+date: "2026-02-16"
+published: true
+url: https://github.com/AbdirahmanNomad/IqraAI
+repository: https://github.com/AbdirahmanNomad/IqraAI
+---
+
+World-class Quran speech recognition with Tarteel-style mistake detection, Iqra/memorization mode, and multilingual translations.
+
+I built **Iqra AI** to help people learn and memorize the Quran with accurate feedback. It combines automatic speech recognition (ASR) fine-tuned for Quranic Arabic—using the Tarteel **whisper-base-ar-quran** model—with verse matching and mistake detection. You see exactly where you went wrong: green for correct, red for missed or incorrect words, yellow for extra words. That kind of feedback used to require a teacher; now it can run on your own machine or as part of an app.
+
+The project started from a simple question: *can we give learners the same quality of recitation feedback that apps like Tarteel offer, but open source and adaptable?* So I integrated the Tanzil Arabic Quran text, the Quran Enc API for translations in **Arabic, English, Somali, Amharic, and Swahili**, and a Gradio web app so anyone can record or upload audio and get a full analysis. There’s also **Iqra mode**: you pick a Surah and Ayah, see the canonical verse (RTL), recite, and the system compares your recitation to the text and highlights mistakes. For letter practice, there’s a **hijaiyah classifier** so learners can practice individual letters and get top-3 predictions.
+
+Under the hood, the pipeline is: audio → Whisper ASR (Quran-tuned) → transcription → verse matcher → mistake detection → optional export (TXT, JSON, SRT). All the core logic lives in **asr_engine.py**, **matcher.py**, and **quran_data.py**, so you can build your own memorization app, mobile backend, or letter-learning tool by importing these modules. The web app (**app.py**) is the reference implementation—run it with `python app.py` and open the Gradio UI at http://127.0.0.1:7860. The CLI (**transcribe.py**) supports batch-style workflows: `python transcribe.py path/to/audio.wav --match --export json`.
+
+Iqra AI is **offered as sadaqa jariyah**—open source for the community. Author: Abdirahman Ahmed. Languages supported: Arabic (Tanzil), English (Rwwad), Somali, Amharic, Swahili via Quran Enc. First run downloads Arabic XML and ASR models (~500MB); translations require internet. Requirements: Python 3.10+, with Metal (MPS) support on Mac M3. See the [GitHub repo](https://github.com/AbdirahmanNomad/IqraAI) for quick start, project structure, contributing guidelines, and license.
